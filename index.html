@@ -38,7 +38,7 @@
       "url": "https://urlandesigner.github.io/LP-UrlanDipre/",
       "image": "https://urlandesigner.github.io/LP-UrlanDipre/og-image.png",
       "telephone": "+55 27 99993-8876",
-      "priceRange": "R$ 1.500–R$ 2.500",
+      "priceRange": "R$ 999–R$ 2.999+",
       "areaServed": "BR",
       "founder": {"@id": "https://urlandesigner.github.io/LP-UrlanDipre/#person"},
       "sameAs": [
@@ -58,11 +58,11 @@
       "@type": "FAQPage",
       "@id": "https://urlandesigner.github.io/LP-UrlanDipre/#faq",
       "mainEntity": [
-        {"@type":"Question","name":"Quanto tempo leva pra ficar pronto?","acceptedAnswer":{"@type":"Answer","text":"O Site Essencial fica pronto em até 7 dias e o Site Profissional em até 14 dias, contando a partir do envio das informações e do conteúdo."}},
+        {"@type":"Question","name":"Quanto tempo leva pra ficar pronto?","acceptedAnswer":{"@type":"Answer","text":"O prazo depende do pacote e começa após o envio das informações e do conteúdo. Projetos Sob Medida têm o prazo definido na proposta."}},
         {"@type":"Question","name":"Eu preciso entender de tecnologia?","acceptedAnswer":{"@type":"Answer","text":"Não. Você conta sobre o negócio e envia o conteúdo. Urlan cuida de toda a parte técnica e entrega tudo funcionando."}},
         {"@type":"Question","name":"O domínio e a hospedagem estão inclusos?","acceptedAnswer":{"@type":"Answer","text":"O desenvolvimento está incluso no valor. Domínio e hospedagem têm custo anual à parte, e Urlan orienta na escolha e faz a configuração."}},
         {"@type":"Question","name":"Posso atualizar o site depois?","acceptedAnswer":{"@type":"Answer","text":"Sim. Pequenos ajustes e pacotes opcionais de manutenção podem ser combinados, sem mensalidade obrigatória."}},
-        {"@type":"Question","name":"E se eu quiser algo diferente do pacote?","acceptedAnswer":{"@type":"Answer","text":"Páginas extras, funções específicas e integrações podem ser combinadas com transparência antes do início do projeto."}},
+        {"@type":"Question","name":"E se eu quiser algo diferente dos pacotes?","acceptedAnswer":{"@type":"Answer","text":"Projetos com páginas extras, catálogo, blog, agendamento ou integrações especiais entram no Site Sob Medida, com proposta personalizada a partir de R$ 2.999."}},
         {"@type":"Question","name":"Como funciona o pagamento?","acceptedAnswer":{"@type":"Answer","text":"Normalmente uma parte é paga na contratação e o restante na entrega. São aceitos Pix, cartão e transferência."}}
       ]
     }
@@ -207,9 +207,9 @@
   /* Pricing */
   #pacotes{background:var(--bg-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
   .center-head{text-align:center;display:flex;flex-direction:column;align-items:center}
-  .prices{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:900px;margin:0 auto;align-items:start}
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:0 auto;align-items:stretch}
   .price-card{position:relative;background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
-    border:1px solid var(--line);border-radius:22px;padding:38px 32px;backdrop-filter:blur(4px)}
+    border:1px solid var(--line);border-radius:22px;padding:34px 26px;backdrop-filter:blur(4px);display:flex;flex-direction:column}
   .price-card.feat{border:1px solid rgba(255,255,255,.18);
     background:linear-gradient(165deg,#7d34d6 0%,#491690 100%);
     box-shadow:0 40px 90px -40px var(--brand-glow)}
@@ -219,10 +219,11 @@
   .price-card .desc{color:var(--ink-soft);font-size:.96rem;margin-bottom:24px}
   .price{display:flex;align-items:baseline;gap:7px;margin-bottom:28px;padding-bottom:26px;border-bottom:1px solid var(--line-soft)}
   .price .cur{font-family:'Fraunces';font-size:1.3rem;font-weight:400;color:var(--ink-soft)}
-  .price .val{font-family:'Fraunces';font-size:3.4rem;font-weight:500;letter-spacing:-.02em}
+  .price .val{font-family:'Fraunces';font-size:3rem;font-weight:500;letter-spacing:-.02em}
   .price .per{color:var(--ink-soft);font-size:.9rem;align-self:flex-end;margin-bottom:10px}
-  .feats{list-style:none;margin-bottom:32px;display:flex;flex-direction:column;gap:14px}
-  .feats li{display:flex;gap:13px;align-items:flex-start;font-size:.98rem;color:var(--ink)}
+  .price .from{flex-basis:100%;font-size:.76rem;text-transform:uppercase;letter-spacing:.13em;color:var(--brand-2);font-weight:700;margin-bottom:-4px}
+  .feats{list-style:none;margin-bottom:32px;display:flex;flex-direction:column;gap:14px;flex:1}
+  .feats li{display:flex;gap:13px;align-items:flex-start;font-size:.94rem;color:var(--ink)}
   .feats li .ck{flex:none;width:20px;height:20px;border-radius:50%;border:1px solid var(--brand-2);color:var(--brand-2);
     display:grid;place-items:center;font-size:.66rem;font-weight:700;margin-top:3px}
   .price-card .btn{width:100%}
@@ -234,10 +235,9 @@
   .price-card.feat .feats li .ck{border-color:rgba(255,255,255,.7);color:#fff}
   .price-card.feat .btn-cta{background:#fff;color:var(--brand);box-shadow:0 14px 40px -14px rgba(0,0,0,.45)}
   .price-card.feat .btn-cta:hover{background:#fff;transform:translateY(-2px)}
-  .price-note{text-align:center;color:var(--ink-soft);font-size:.94rem;max-width:540px;margin:36px auto 0;line-height:1.6}
+  .price-note{text-align:center;color:var(--ink-soft);font-size:.94rem;max-width:680px;margin:36px auto 0;line-height:1.6}
   .price-note svg{width:17px;height:17px;color:var(--brand-2);display:inline-block;vertical-align:-3px;margin-right:8px}
-  @media(max-width:760px){.prices{grid-template-columns:1fr;max-width:440px}}
-  @media(max-width:760px){.prices{grid-template-columns:1fr;max-width:440px}}
+  @media(max-width:980px){.prices{grid-template-columns:1fr;max-width:460px;gap:26px}}
 
   /* Portfolio */
   .port{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -527,48 +527,60 @@
 <section class="block" id="pacotes">
   <div class="wrap">
     <div class="center-head">
-      <span class="eyebrow reveal">Preço fechado, sem surpresa</span>
+      <span class="eyebrow reveal">Opções claras, sem surpresa</span>
       <h2 class="sec-h reveal d1" style="margin:18px 0 16px">Escolha o pacote ideal pro <b>seu momento</b></h2>
-      <p class="sec-sub reveal d2" style="margin-bottom:54px">Você sabe exatamente o que vai pagar e o que vai receber.</p>
+      <p class="sec-sub reveal d2" style="margin-bottom:54px">Do essencial ao sob medida, existe uma opção para cada objetivo.</p>
     </div>
     <div class="prices">
 
       <div class="price-card reveal d1">
         <h3>Site Essencial</h3>
-        <p class="desc">Para estar online rápido e com cara profissional.</p>
-        <div class="price"><span class="cur">R$</span><span class="val">1.500</span><span class="per">único</span></div>
+        <p class="desc">Para colocar seu negócio no ar com presença profissional.</p>
+        <div class="price"><span class="cur">R$</span><span class="val">999</span><span class="per">único</span></div>
         <ul class="feats">
-          <li><span class="ck">✓</span>Site de uma página (one-page)</li>
-          <li><span class="ck">✓</span>Design personalizado pro seu negócio</li>
-          <li><span class="ck">✓</span>100% otimizado para celular</li>
-          <li><span class="ck">✓</span>Pronto para aparecer no Google</li>
-          <li><span class="ck">✓</span>Botão de WhatsApp integrado</li>
-          <li><span class="ck">✓</span>Entrega em até 7 dias</li>
+          <li><span class="ck">✓</span>Site de uma página</li>
+          <li><span class="ck">✓</span>Design exclusivo para o seu negócio</li>
+          <li><span class="ck">✓</span>Perfeito no celular</li>
+          <li><span class="ck">✓</span>Preparado para aparecer no Google</li>
+          <li><span class="ck">✓</span>WhatsApp integrado</li>
         </ul>
-        <a class="btn btn-ghost" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Site%20Essencial%20(R%241.500)." target="_blank" rel="noopener">Quero o Essencial</a>
+        <a class="btn btn-ghost" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Site%20Essencial%20(R%24999)." target="_blank" rel="noopener">Quero o Essencial</a>
       </div>
 
       <div class="price-card feat reveal d2">
         <span class="tag">Mais escolhido</span>
         <h3>Site Profissional</h3>
-        <p class="desc">Para crescer, ranquear no Google e converter de verdade.</p>
-        <div class="price"><span class="cur">R$</span><span class="val">2.500</span><span class="per">único</span></div>
+        <p class="desc">Para crescer, ganhar autoridade e converter mais clientes.</p>
+        <div class="price"><span class="cur">R$</span><span class="val">1.899</span><span class="per">único</span></div>
         <ul class="feats">
-          <li><span class="ck">✓</span>Tudo do Essencial, e mais:</li>
-          <li><span class="ck">✓</span>Até 5 páginas (serviços, sobre, contato...)</li>
-          <li><span class="ck">✓</span>Galeria / portfólio de trabalhos</li>
+          <li><span class="ck">✓</span>Site completo para apresentar seu negócio</li>
+          <li><span class="ck">✓</span>Estrutura preparada para SEO local</li>
+          <li><span class="ck">✓</span>Galeria ou portfólio de trabalhos</li>
           <li><span class="ck">✓</span>Integração com Instagram e Google Maps</li>
-          <li><span class="ck">✓</span>SEO local avançado (aparecer na sua cidade)</li>
-          <li><span class="ck">✓</span>30 dias de suporte e ajustes</li>
+          <li><span class="ck">✓</span>Suporte após a publicação</li>
         </ul>
-        <a class="btn btn-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Site%20Profissional%20(R%242.500)." target="_blank" rel="noopener">
+        <a class="btn btn-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Site%20Profissional%20(R%241.899)." target="_blank" rel="noopener">
           <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
           Quero o Profissional
         </a>
       </div>
 
+      <div class="price-card reveal d3">
+        <h3>Site Sob Medida</h3>
+        <p class="desc">Para projetos maiores, integrações e necessidades específicas.</p>
+        <div class="price"><span class="from">A partir de</span><span class="cur">R$</span><span class="val">2.999</span></div>
+        <ul class="feats">
+          <li><span class="ck">✓</span>Estrutura planejada conforme seus objetivos</li>
+          <li><span class="ck">✓</span>Integrações e funcionalidades avançadas</li>
+          <li><span class="ck">✓</span>Catálogo, blog, agendamento ou páginas extras</li>
+          <li><span class="ck">✓</span>Estratégia e proposta personalizadas</li>
+          <li><span class="ck">✓</span>Prazo e suporte definidos para o projeto</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20o%20Site%20Sob%20Medida%20(a%20partir%20de%20R%242.999)." target="_blank" rel="noopener">Solicitar orçamento</a>
+      </div>
+
     </div>
-    <p class="price-note reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Valores para o escopo descrito acima. Personalizações extras são combinadas com transparência — sem surpresa.</p>
+    <p class="price-note reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Essencial e Profissional têm preço fechado. Projetos Sob Medida começam em R$ 2.999 e recebem uma proposta conforme a necessidade.</p>
   </div>
 </section>
 
@@ -645,7 +657,7 @@
     <div class="faq">
       <div class="faq-item">
         <button class="faq-q">Quanto tempo leva pra ficar pronto?<span class="pm">+</span></button>
-        <div class="faq-a"><p>Depende do pacote: o Essencial fica pronto em até 7 dias e o Profissional em até 14 dias, contando a partir do envio das informações e do conteúdo.</p></div>
+        <div class="faq-a"><p>O prazo depende do pacote e começa após o envio das informações e do conteúdo. Projetos Sob Medida têm o prazo definido na proposta.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Eu preciso entender de tecnologia?<span class="pm">+</span></button>
@@ -660,8 +672,8 @@
         <div class="faq-a"><p>Pode. Pequenos ajustes podem ser combinados, e ofereço pacotes de manutenção opcionais caso você queira atualizações frequentes. Nada de mensalidade obrigatória.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">E se eu quiser algo diferente do pacote?<span class="pm">+</span></button>
-        <div class="faq-a"><p>Sem problema. O valor de cada pacote cobre exatamente o que está descrito nele. Se você precisar de algo a mais — páginas extras, uma função específica, alguma integração — a gente combina o ajuste com transparência antes de começar, pra você nunca ter surpresa no preço.</p></div>
+        <button class="faq-q">E se eu quiser algo diferente dos pacotes?<span class="pm">+</span></button>
+        <div class="faq-a"><p>Projetos com páginas extras, catálogo, blog, agendamento ou integrações especiais entram no Site Sob Medida. O investimento começa em R$ 2.999 e você recebe uma proposta personalizada antes de começar.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Como funciona o pagamento?<span class="pm">+</span></button>
