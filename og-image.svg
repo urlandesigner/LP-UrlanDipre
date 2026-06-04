@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="70%" cy="10%" r="80%">
+      <stop stop-color="#7120D1" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#0B0A0F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7120D1"/>
+      <stop offset="1" stop-color="#A255FD"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B0A0F"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <circle cx="1050" cy="510" r="300" fill="#A255FD" opacity=".08"/>
+  <rect x="70" y="70" width="12" height="490" rx="6" fill="url(#accent)"/>
+  <text x="125" y="160" fill="#A255FD" font-family="Arial, sans-serif" font-size="25" font-weight="700" letter-spacing="4">URLAN DIPRÉ</text>
+  <text x="125" y="260" fill="#F1EEF6" font-family="Georgia, serif" font-size="72">Criação de sites</text>
+  <text x="125" y="345" fill="#F1EEF6" font-family="Georgia, serif" font-size="72" font-weight="700">profissionais.</text>
+  <text x="125" y="425" fill="#B9B3C6" font-family="Arial, sans-serif" font-size="30">Design sofisticado, performance e SEO.</text>
+  <rect x="125" y="475" width="350" height="64" rx="32" fill="url(#accent)"/>
+  <text x="300" y="516" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="24" font-weight="700">Preço fechado</text>
+</svg>
