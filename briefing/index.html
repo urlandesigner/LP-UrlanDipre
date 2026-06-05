@@ -263,7 +263,7 @@
       <span class="eyebrow">Briefing · UD Labs</span>
       <h1>Vamos criar seu <b>projeto digital</b></h1>
       <p>Responda algumas perguntas rápidas para que eu possa entender sua necessidade e preparar uma proposta personalizada.</p>
-      <button type="button" class="btn btn-cta" data-action="next">Começar <span class="arr">→</span></button>
+      <button type="button" class="btn btn-cta" data-action="next">Começar</button>
       <div class="welcome-meta">
         <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.4 1.4" stroke-linecap="round"/></svg>Menos de 3 minutos</span>
         <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5l3.2 3.2L13 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sem compromisso</span>
@@ -445,8 +445,8 @@
     <div class="nav-row" id="navRow" style="display:none">
       <button type="button" class="btn btn-ghost" data-action="prev">Voltar</button>
       <div class="spacer"></div>
-      <span class="hint" id="enterHint">Pressione <b>Enter ↵</b></span>
-      <button type="button" class="btn btn-cta" data-action="next" id="nextBtn">Continuar <span class="arr">→</span></button>
+      <span class="hint" id="enterHint">Pressione <b>Enter</b></span>
+      <button type="button" class="btn btn-cta" data-action="next" id="nextBtn">Continuar</button>
     </div>
 
     <!-- 9 · SUCESSO -->
@@ -454,9 +454,9 @@
       <div class="check">
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>
       </div>
-      <h1>Recebemos sua <span class="accent-i">solicitação</span> 🚀</h1>
+      <h1>Recebemos sua <span class="accent-i">solicitação</span></h1>
       <p>Obrigado pelo interesse. Sua solicitação foi registrada com sucesso e entrarei em contato em breve para entender melhor os detalhes e apresentar a melhor solução para seu projeto.</p>
-      <a href="index.html" class="btn btn-cta">Voltar para o site <span class="arr">→</span></a>
+      <a href="index.html" class="btn btn-cta">Voltar para o site</a>
     </section>
 
   </form>
@@ -522,8 +522,9 @@ const ENDPOINT = window.UD_LEAD_ENDPOINT || "";
       // button label / enter hint
       if(navigable){
         const last = (i === lastInput);
-        nextBtn.querySelector('.arr').style.display = last ? 'none' : '';
-        nextBtn.childNodes[0].nodeValue = last ? 'Enviar briefing ' : 'Continuar ';
+        const arr = nextBtn.querySelector('.arr');
+        if(arr) arr.style.display = last ? 'none' : '';
+        nextBtn.childNodes[0].nodeValue = last ? 'Enviar briefing' : 'Continuar';
         enterHint.style.display = isOptionStep(nextEl) ? 'none' : '';
       }
       // focus
@@ -777,7 +778,7 @@ const ENDPOINT = window.UD_LEAD_ENDPOINT || "";
     }
     try{ gtag('event','generate_lead',{event_category:'briefing',value:1}); }catch(e){}
     nextBtn.disabled = false;
-    nextBtn.innerHTML = 'Continuar <span class="arr">→</span>';
+    nextBtn.innerHTML = 'Continuar';
     // ir para tela de sucesso
     const doneIdx = steps.findIndex(s=>s.dataset.step==='done');
     show(doneIdx);
