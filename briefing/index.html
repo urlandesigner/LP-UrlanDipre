@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<base href="../">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NE6Z6B18ZW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NE6Z6B18ZW');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Briefing de Projeto Digital | UD Labs</title>
+<meta name="description" content="Responda algumas perguntas rápidas e receba uma proposta personalizada da UD Labs para o seu projeto digital.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0B0A0F">
+<link rel="canonical" href="https://urlandesigner.github.io/LP-UrlanDipre/briefing/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="UD Labs">
+<meta property="og:title" content="Briefing de Projeto Digital | UD Labs">
+<meta property="og:description" content="Uma experiência guiada para entender seu projeto e preparar uma proposta personalizada.">
+<meta property="og:url" content="https://urlandesigner.github.io/LP-UrlanDipre/briefing/">
+<meta property="og:image" content="https://urlandesigner.github.io/LP-UrlanDipre/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Briefing de Projeto Digital | UD Labs">
+<meta name="twitter:description" content="Responda algumas perguntas rápidas e receba uma proposta personalizada.">
+<meta name="twitter:image" content="https://urlandesigner.github.io/LP-UrlanDipre/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0A0F;
+    --bg-2:#110E18;
+    --panel:rgba(255,255,255,.025);
+    --panel-2:rgba(255,255,255,.045);
+    --ink:#F1EEF6;
+    --ink-soft:#948FA3;
+    --line:rgba(241,238,246,.10);
+    --line-soft:rgba(241,238,246,.06);
+    --brand:#7120D1;
+    --brand-2:#A255FD;
+    --brand-glow:rgba(162,85,253,.34);
+    --wa:#25D366;
+    --radius:16px;
+    --maxw:680px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{overflow-x:clip}
+  body{
+    font-family:'Hanken Grotesk',system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;
+    -webkit-font-smoothing:antialiased;min-height:100vh;min-height:100dvh;
+    position:relative;overflow-x:clip;
+    display:flex;flex-direction:column;
+  }
+  /* Grain */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Ambient glow */
+  body::after{
+    content:"";position:fixed;z-index:0;pointer-events:none;
+    top:-22%;left:50%;transform:translateX(-50%);
+    width:min(900px,120vw);height:560px;
+    background:radial-gradient(ellipse at center,rgba(162,85,253,.18),transparent 64%);
+    filter:blur(18px);
+  }
+  h1,h2,h3,.serif{font-family:'Lora',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.01em}
+  .accent{color:var(--brand-2)}
+  .accent-i{font-style:italic;color:var(--brand-2)}
+  ::selection{background:var(--brand-2);color:#fff}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:11px;font-weight:600;font-size:.74rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--brand-2)}
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--brand-2);opacity:.6}
+
+  /* Logo */
+  .brand-logo{display:inline-flex;align-items:baseline;gap:.16em;font-family:'Hanken Grotesk',sans-serif;
+    font-weight:700;font-size:1.26rem;letter-spacing:-.015em;line-height:1;white-space:nowrap;color:var(--ink)}
+  .brand-logo .ud{font-weight:800;background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .brand-logo .labs{font-weight:600;color:var(--ink)}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:'Hanken Grotesk';font-weight:600;font-size:1rem;
+    padding:15px 28px;border-radius:999px;border:none;cursor:pointer;min-height:54px;
+    transition:transform .18s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, opacity .2s ease;}
+  .btn-cta{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
+    box-shadow:0 14px 42px -14px var(--brand-glow), inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn-cta:hover{transform:translateY(-2px);box-shadow:0 22px 54px -14px var(--brand-glow), inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn-cta:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none}
+  .btn-ghost{background:transparent;color:var(--ink-soft);border:1px solid var(--line);padding:14px 24px;min-height:50px;font-size:.95rem}
+  .btn-ghost:hover{border-color:var(--brand-2);color:var(--ink);background:var(--panel-2)}
+  .btn .arr{transition:transform .2s ease}
+  .btn-cta:hover .arr{transform:translateX(3px)}
+
+  /* Header */
+  header.top{position:relative;z-index:5;padding:22px 24px 0}
+  .top-in{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+  .top-back{display:inline-flex;align-items:center;gap:7px;font-size:.86rem;color:var(--ink-soft);
+    transition:color .2s ease;text-decoration:none}
+  .top-back:hover{color:var(--ink)}
+
+  /* Progress */
+  .progress-shell{position:relative;z-index:5;max-width:var(--maxw);margin:18px auto 0;padding:0 24px;
+    opacity:0;transition:opacity .4s ease}
+  .progress-shell.show{opacity:1}
+  .progress-meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px;
+    font-size:.74rem;letter-spacing:.04em;color:var(--ink-soft)}
+  .progress-meta b{color:var(--ink);font-weight:600}
+  .progress-track{height:4px;border-radius:999px;background:var(--line);overflow:hidden}
+  .progress-fill{height:100%;width:0;border-radius:999px;
+    background:linear-gradient(90deg,var(--brand),var(--brand-2));
+    transition:width .5s cubic-bezier(.22,1,.36,1)}
+
+  /* Stage */
+  main{position:relative;z-index:5;flex:1;display:flex;align-items:center;justify-content:center;
+    width:100%;max-width:var(--maxw);margin:0 auto;padding:34px 24px 48px}
+  .stage{width:100%;position:relative}
+
+  .step{display:none}
+  .step.active{display:block;animation:stepIn .5s cubic-bezier(.22,1,.36,1) both}
+  @keyframes stepIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  .step.leaving{animation:stepOut .26s ease both}
+  @keyframes stepOut{from{opacity:1}to{opacity:0;transform:translateY(-10px)}}
+
+  .step-head{margin-bottom:26px}
+  .step-kicker{font-family:'Hanken Grotesk';font-size:.76rem;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brand-2);margin-bottom:14px;display:block}
+  .step h2{font-size:clamp(1.9rem,5.4vw,2.7rem);margin-bottom:12px}
+  .step h2 b{font-weight:600;font-style:italic;color:var(--brand-2)}
+  .step .sub{color:var(--ink-soft);font-size:1.02rem;max-width:46ch}
+
+  /* Fields */
+  .fields{display:flex;flex-direction:column;gap:16px}
+  .field{display:flex;flex-direction:column;gap:7px}
+  .field.half{flex:1}
+  .row{display:flex;gap:14px}
+  @media(max-width:520px){.row{flex-direction:column}}
+  .field label{font-size:.82rem;font-weight:600;color:var(--ink-soft);letter-spacing:.01em}
+  .field label .opt{font-weight:400;opacity:.7}
+  .field input,.field select,.field textarea{
+    font-family:'Hanken Grotesk';font-size:1.02rem;color:var(--ink);
+    background:var(--panel);border:1px solid var(--line);border-radius:13px;
+    padding:14px 16px;width:100%;transition:border-color .2s ease,background .2s ease,box-shadow .2s ease;
+    -webkit-appearance:none;appearance:none}
+  .field textarea{resize:vertical;min-height:120px;line-height:1.55}
+  .field input::placeholder,.field textarea::placeholder{color:#5f5a6e}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--brand-2);background:var(--panel-2);
+    box-shadow:0 0 0 4px rgba(162,85,253,.12)}
+  .field select{cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23948FA3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 16px center;padding-right:42px}
+  .field select option{background:#160f24;color:var(--ink)}
+  .field .err{font-size:.78rem;color:#ff8a8a;display:none}
+  .field.invalid input,.field.invalid select{border-color:rgba(255,120,120,.6)}
+  .field.invalid .err{display:block}
+
+  /* Option cards (single select) */
+  .options{display:grid;gap:11px}
+  .options.cols-2{grid-template-columns:1fr 1fr}
+  @media(max-width:520px){.options.cols-2{grid-template-columns:1fr}}
+  .opt-card{display:flex;align-items:center;gap:14px;text-align:left;width:100%;
+    font-family:'Hanken Grotesk';font-size:1.02rem;color:var(--ink);font-weight:500;
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:16px 18px;cursor:pointer;position:relative;
+    transition:border-color .2s ease,background .2s ease,transform .12s ease}
+  .opt-card:hover{border-color:rgba(162,85,253,.5);background:var(--panel-2)}
+  .opt-card:active{transform:scale(.99)}
+  .opt-card:focus-visible{outline:none;border-color:var(--brand-2);box-shadow:0 0 0 4px rgba(162,85,253,.14)}
+  .opt-card .tick{width:22px;height:22px;flex:none;border-radius:50%;border:1.5px solid var(--line);
+    display:grid;place-items:center;transition:border-color .2s ease,background .2s ease}
+  .opt-card .tick svg{width:12px;height:12px;opacity:0;transform:scale(.5);transition:opacity .2s ease,transform .2s ease}
+  .opt-card[aria-checked="true"]{border-color:var(--brand-2);background:rgba(162,85,253,.08)}
+  .opt-card[aria-checked="true"] .tick{border-color:var(--brand-2);background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+  .opt-card[aria-checked="true"] .tick svg{opacity:1;transform:none}
+  .other-wrap{display:none;margin-top:4px}
+  .other-wrap.show{display:block;animation:stepIn .3s ease both}
+
+  .note{margin-top:16px;font-size:.84rem;color:var(--ink-soft);display:flex;gap:8px;align-items:flex-start;
+    font-family:'Lora',serif;font-style:italic;line-height:1.5}
+  .note svg{width:15px;height:15px;flex:none;margin-top:3px;opacity:.7}
+
+  /* Nav row */
+  .nav-row{display:flex;align-items:center;gap:14px;margin-top:30px}
+  .nav-row .spacer{flex:1}
+  .hint{font-size:.78rem;color:var(--ink-soft);opacity:.75}
+  @media(max-width:520px){.hint{display:none}}
+
+  /* Welcome */
+  .welcome{text-align:center;padding:10px 0}
+  .welcome .eyebrow{justify-content:center;margin-bottom:22px}
+  .welcome h1{font-size:clamp(2.3rem,7vw,3.4rem);margin-bottom:18px}
+  .welcome h1 b{font-weight:600;font-style:italic;color:var(--brand-2)}
+  .welcome p{color:var(--ink-soft);font-size:1.08rem;max-width:42ch;margin:0 auto 30px}
+  .welcome .btn{padding:16px 40px}
+  .welcome-meta{margin-top:26px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;
+    font-size:.82rem;color:var(--ink-soft)}
+  .welcome-meta span{display:inline-flex;align-items:center;gap:7px}
+  .welcome-meta svg{width:15px;height:15px;opacity:.7}
+
+  /* Success */
+  .done{text-align:center;padding:10px 0}
+  .done .check{width:84px;height:84px;margin:0 auto 26px;border-radius:50%;
+    background:radial-gradient(circle at 30% 25%,rgba(162,85,253,.4),transparent 70%),linear-gradient(135deg,var(--brand),var(--brand-2));
+    display:grid;place-items:center;box-shadow:0 20px 60px -18px var(--brand-glow);
+    animation:pop .6s cubic-bezier(.22,1.4,.5,1) both}
+  @keyframes pop{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:none}}
+  .done .check svg{width:40px;height:40px}
+  .done h1{font-size:clamp(2rem,6vw,2.9rem);margin-bottom:16px}
+  .done p{color:var(--ink-soft);font-size:1.05rem;max-width:44ch;margin:0 auto 30px}
+
+  /* Sending overlay state */
+  .spin{width:18px;height:18px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;
+    border-radius:50%;animation:rot .7s linear infinite}
+  @keyframes rot{to{transform:rotate(360deg)}}
+
+  footer.foot{position:relative;z-index:5;text-align:center;padding:20px 24px 28px;
+    font-size:.78rem;color:var(--ink-soft);opacity:.7}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a href="index.html" class="brand-logo" aria-label="UD Labs — página inicial"><span class="ud">UD</span><span class="labs">Labs</span></a>
+    <a href="index.html" class="top-back" aria-label="Voltar para o site">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L5 7l4 4"/></svg>
+      Voltar ao site
+    </a>
+  </div>
+</header>
+
+<div class="progress-shell" id="progressShell" aria-hidden="true">
+  <div class="progress-meta">
+    <span>Etapa <b id="stepNow">1</b> de <span id="stepTotal">8</span></span>
+    <span id="stepPct">0%</span>
+  </div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+</div>
+
+<main>
+  <form class="stage" id="wizard" novalidate>
+
+    <!-- 0 · WELCOME -->
+    <section class="step active welcome" data-step="welcome">
+      <span class="eyebrow">Briefing · UD Labs</span>
+      <h1>Vamos criar seu <b>projeto digital</b></h1>
+      <p>Responda algumas perguntas rápidas para que eu possa entender sua necessidade e preparar uma proposta personalizada.</p>
+      <button type="button" class="btn btn-cta" data-action="next">Começar <span class="arr">→</span></button>
+      <div class="welcome-meta">
+        <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.4 1.4" stroke-linecap="round"/></svg>Menos de 3 minutos</span>
+        <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5l3.2 3.2L13 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sem compromisso</span>
+      </div>
+    </section>
+
+    <!-- 1 · CONTATO -->
+    <section class="step" data-step="contato" data-progress="1">
+      <div class="step-head">
+        <span class="step-kicker">Contato</span>
+        <h2>Como posso <b>falar com você?</b></h2>
+        <p class="sub">Seus dados ficam comigo e são usados apenas para retornar sobre o projeto.</p>
+      </div>
+      <div class="fields">
+        <div class="field" data-validate="required">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome">
+          <span class="err">Por favor, informe seu nome.</span>
+        </div>
+        <div class="row">
+          <div class="field half" data-validate="email">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com">
+            <span class="err">Informe um e-mail válido.</span>
+          </div>
+          <div class="field half" data-validate="phone">
+            <label for="whatsapp">WhatsApp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(27) 99999-9999">
+            <span class="err">Informe um WhatsApp válido.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · EMPRESA -->
+    <section class="step" data-step="empresa" data-progress="2">
+      <div class="step-head">
+        <span class="step-kicker">Sobre a empresa</span>
+        <h2>Me conta do seu <b>negócio</b></h2>
+        <p class="sub">Quanto mais contexto, mais precisa fica a proposta.</p>
+      </div>
+      <div class="fields">
+        <div class="field" data-validate="required">
+          <label for="empresa">Nome da empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa ou marca">
+          <span class="err">Informe o nome da empresa.</span>
+        </div>
+        <div class="field" data-validate="required">
+          <label for="segmento">Segmento de atuação</label>
+          <input type="text" id="segmento" name="segmento" placeholder="Ex.: odontologia, advocacia, moda…">
+          <span class="err">Informe o segmento.</span>
+        </div>
+        <div class="row">
+          <div class="field half" data-validate="required">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" autocomplete="address-level2" placeholder="Sua cidade">
+            <span class="err">Informe a cidade.</span>
+          </div>
+          <div class="field half" data-validate="required">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado">
+              <option value="" disabled selected>UF</option>
+              <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+            </select>
+            <span class="err">Selecione o estado.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field half">
+            <label for="site">Site atual <span class="opt">(opcional)</span></label>
+            <input type="text" id="site" name="site" placeholder="www.seusite.com.br">
+          </div>
+          <div class="field half">
+            <label for="instagram">Instagram <span class="opt">(opcional)</span></label>
+            <input type="text" id="instagram" name="instagram" placeholder="@seuperfil">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · TIPO DE PROJETO -->
+    <section class="step" data-step="tipo" data-progress="3">
+      <div class="step-head">
+        <span class="step-kicker">Tipo de projeto</span>
+        <h2>O que você deseja <b>desenvolver?</b></h2>
+      </div>
+      <div class="options cols-2" role="radiogroup" aria-label="Tipo de projeto" data-name="tipoProjeto" data-other="Outro">
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Landing Page"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Landing Page</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Site Institucional"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Site Institucional</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="E-commerce"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>E-commerce</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Sistema Web"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Sistema Web</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Aplicativo"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Aplicativo</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Outro"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Outro</button>
+      </div>
+      <div class="other-wrap"><div class="field"><input type="text" class="other-input" placeholder="Conta pra mim o que você precisa…"></div></div>
+    </section>
+
+    <!-- 4 · OBJETIVO -->
+    <section class="step" data-step="objetivo" data-progress="4">
+      <div class="step-head">
+        <span class="step-kicker">Objetivo</span>
+        <h2>Qual o principal <b>objetivo?</b></h2>
+      </div>
+      <div class="options" role="radiogroup" aria-label="Objetivo do projeto" data-name="objetivo" data-other="Outro">
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Gerar mais clientes"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Gerar mais clientes</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Passar mais credibilidade"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Passar mais credibilidade</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Vender produtos online"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Vender produtos online</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Apresentar meus serviços"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Apresentar meus serviços</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Automatizar processos"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Automatizar processos</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Outro"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Outro</button>
+      </div>
+      <div class="other-wrap"><div class="field"><input type="text" class="other-input" placeholder="Descreve seu objetivo…"></div></div>
+    </section>
+
+    <!-- 5 · PRAZO -->
+    <section class="step" data-step="prazo" data-progress="5">
+      <div class="step-head">
+        <span class="step-kicker">Prazo</span>
+        <h2>Quando pretende <b>iniciar?</b></h2>
+      </div>
+      <div class="options" role="radiogroup" aria-label="Prazo" data-name="prazo">
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Imediatamente"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Imediatamente</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Em até 30 dias"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Em até 30 dias</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Em até 60 dias"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Em até 60 dias</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Apenas pesquisando opções"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Apenas pesquisando opções</button>
+      </div>
+    </section>
+
+    <!-- 6 · INVESTIMENTO -->
+    <section class="step" data-step="investimento" data-progress="6">
+      <div class="step-head">
+        <span class="step-kicker">Investimento</span>
+        <h2>Qual faixa de <b>investimento</b> você imagina?</h2>
+      </div>
+      <div class="options" role="radiogroup" aria-label="Investimento" data-name="investimento">
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Até R$ 2.000"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Até R$ 2.000</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="R$ 2.000 a R$ 5.000"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>R$ 2.000 a R$ 5.000</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="R$ 5.000 a R$ 10.000"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>R$ 5.000 a R$ 10.000</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Acima de R$ 10.000"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Acima de R$ 10.000</button>
+        <button type="button" class="opt-card" role="radio" aria-checked="false" data-value="Não tenho certeza"><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.2l2.6 2.6L10 3.2"/></svg></span>Não tenho certeza</button>
+      </div>
+      <p class="note">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 7.2v3.4M8 5.2v.2" stroke-linecap="round"/></svg>
+        Essa informação é só para ajudar a recomendar a melhor solução para você.
+      </p>
+    </section>
+
+    <!-- 7 · REFERÊNCIAS -->
+    <section class="step" data-step="referencias" data-progress="7">
+      <div class="step-head">
+        <span class="step-kicker">Referências</span>
+        <h2>Tem algum site que você <b>gosta?</b></h2>
+        <p class="sub">Referências ajudam a entender seu gosto e expectativa. Opcional.</p>
+      </div>
+      <div class="fields">
+        <div class="field">
+          <label for="referencias">Sites ou marcas de referência <span class="opt">(opcional)</span></label>
+          <textarea id="referencias" name="referencias" placeholder="Cole links ou cite exemplos que te inspiram…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · DETALHES -->
+    <section class="step" data-step="detalhes" data-progress="8">
+      <div class="step-head">
+        <span class="step-kicker">Detalhes</span>
+        <h2>Mais alguma coisa <b>importante?</b></h2>
+        <p class="sub">Funcionalidades específicas, ideias, dúvidas — fique à vontade. Opcional.</p>
+      </div>
+      <div class="fields">
+        <div class="field">
+          <label for="observacoes">Detalhes adicionais <span class="opt">(opcional)</span></label>
+          <textarea id="observacoes" name="observacoes" placeholder="Escreva o que mais quiser compartilhar sobre o projeto…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAV (shared) -->
+    <div class="nav-row" id="navRow" style="display:none">
+      <button type="button" class="btn btn-ghost" data-action="prev">Voltar</button>
+      <div class="spacer"></div>
+      <span class="hint" id="enterHint">Pressione <b>Enter ↵</b></span>
+      <button type="button" class="btn btn-cta" data-action="next" id="nextBtn">Continuar <span class="arr">→</span></button>
+    </div>
+
+    <!-- 9 · SUCESSO -->
+    <section class="step done" data-step="done">
+      <div class="check">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6"/></svg>
+      </div>
+      <h1>Recebemos sua <span class="accent-i">solicitação</span> 🚀</h1>
+      <p>Obrigado pelo interesse. Sua solicitação foi registrada com sucesso e entrarei em contato em breve para entender melhor os detalhes e apresentar a melhor solução para seu projeto.</p>
+      <a href="index.html" class="btn btn-cta">Voltar para o site <span class="arr">→</span></a>
+    </section>
+
+  </form>
+</main>
+
+<footer class="foot">© 2026 UD Labs · Briefing de projeto</footer>
+
+<script>
+/* =========================================================================
+   UD Labs — Briefing wizard
+   Para integrar ao sistema, defina window.UD_LEAD_ENDPOINT antes deste script
+   ou substitua o valor de ENDPOINT por uma URL de API/Webhook.
+   ========================================================================= */
+const ENDPOINT = window.UD_LEAD_ENDPOINT || "";
+
+(function(){
+  const form      = document.getElementById('wizard');
+  const steps     = Array.from(form.querySelectorAll('.step'));
+  const navRow    = document.getElementById('navRow');
+  const nextBtn   = document.getElementById('nextBtn');
+  const enterHint = document.getElementById('enterHint');
+  const pShell    = document.getElementById('progressShell');
+  const pFill     = document.getElementById('progressFill');
+  const stepNow   = document.getElementById('stepNow');
+  const stepPct   = document.getElementById('stepPct');
+  const TOTAL     = 8;                       // etapas de pergunta (exclui welcome/done)
+  const lastInput = steps.findIndex(s => s.dataset.step === 'detalhes'); // último passo navegável
+  let current = 0;
+
+  /* ---- helpers ---- */
+  const isOptionStep = (el) => !!el.querySelector('.options');
+  const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+  const phoneOk = (v) => (v.replace(/\D/g,'').length >= 10);
+
+  function setProgress(el){
+    const p = parseInt(el.dataset.progress || '0', 10);
+    const show = p > 0;
+    pShell.classList.toggle('show', show);
+    pShell.style.opacity = show ? '1' : '0';
+    pShell.setAttribute('aria-hidden', show ? 'false' : 'true');
+    if(show){
+      const pct = Math.round((p/TOTAL)*100);
+      pFill.style.width = pct + '%';
+      stepNow.textContent = p;
+      stepPct.textContent = pct + '%';
+    }
+  }
+
+  function show(i, dir){
+    const prevEl = steps[current];
+    const nextEl = steps[i];
+    if(prevEl && prevEl !== nextEl){
+      prevEl.classList.add('leaving');
+      setTimeout(()=> prevEl.classList.remove('active','leaving'), 240);
+    }
+    current = i;
+    setTimeout(()=>{
+      nextEl.classList.add('active');
+      // nav row visible only on input steps (not welcome/done)
+      const navigable = nextEl.dataset.step !== 'welcome' && nextEl.dataset.step !== 'done';
+      navRow.style.display = navigable ? 'flex' : 'none';
+      setProgress(nextEl);
+      // button label / enter hint
+      if(navigable){
+        const last = (i === lastInput);
+        nextBtn.querySelector('.arr').style.display = last ? 'none' : '';
+        nextBtn.childNodes[0].nodeValue = last ? 'Enviar briefing ' : 'Continuar ';
+        enterHint.style.display = isOptionStep(nextEl) ? 'none' : '';
+      }
+      // focus
+      const f = nextEl.querySelector('input,select,textarea,.opt-card,.btn-cta');
+      if(f && nextEl.dataset.step !== 'welcome') { try{ f.focus({preventScroll:true}); }catch(e){} }
+      window.scrollTo({top:0, behavior:'smooth'});
+    }, prevEl && prevEl !== nextEl ? 240 : 0);
+  }
+
+  /* ---- validation ---- */
+  function validateStep(el){
+    let ok = true;
+    el.querySelectorAll('.field[data-validate]').forEach(fld=>{
+      const input = fld.querySelector('input,select');
+      const v = (input.value||'').trim();
+      const type = fld.dataset.validate;
+      let good = true;
+      if(type === 'required') good = v.length > 0;
+      else if(type === 'email') good = emailOk(v);
+      else if(type === 'phone') good = phoneOk(v);
+      fld.classList.toggle('invalid', !good);
+      if(!good && ok){ input.focus(); }
+      if(!good) ok = false;
+    });
+    // option steps: require a selection
+    if(isOptionStep(el)){
+      const grp = el.querySelector('.options');
+      const picked = grp.querySelector('[aria-checked="true"]');
+      if(!picked){ ok = false; grp.style.animation='shake .35s'; setTimeout(()=>grp.style.animation='',360); }
+      // "Outro" needs text
+      const otherWrap = el.querySelector('.other-wrap');
+      if(otherWrap && otherWrap.classList.contains('show')){
+        const oi = otherWrap.querySelector('.other-input');
+        if(!oi.value.trim()){ ok=false; oi.focus(); }
+      }
+    }
+    return ok;
+  }
+
+  /* ---- option cards ---- */
+  steps.forEach(step=>{
+    const grp = step.querySelector('.options');
+    if(!grp) return;
+    const otherWrap = step.querySelector('.other-wrap');
+    const otherVal  = grp.dataset.other;
+    grp.querySelectorAll('.opt-card').forEach(card=>{
+      card.addEventListener('click', ()=>{
+        grp.querySelectorAll('.opt-card').forEach(c=>c.setAttribute('aria-checked','false'));
+        card.setAttribute('aria-checked','true');
+        const val = card.dataset.value;
+        const isOther = otherVal && val === otherVal;
+        if(otherWrap){
+          otherWrap.classList.toggle('show', isOther);
+          if(isOther){ otherWrap.querySelector('.other-input').focus(); }
+        }
+        // auto-advance unless "Outro" (needs typing)
+        if(!isOther){ setTimeout(()=> goNext(), 320); }
+      });
+    });
+  });
+
+  /* shake keyframes (injected) */
+  const sk = document.createElement('style');
+  sk.textContent = '@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}';
+  document.head.appendChild(sk);
+
+  /* ---- navigation ---- */
+  function goNext(){
+    const el = steps[current];
+    if(el.dataset.step === 'welcome'){ show(current+1); return; }
+    if(!validateStep(el)) return;
+    if(current === lastInput){ submit(); return; }
+    show(current+1, 1);
+  }
+  function goPrev(){
+    // find previous visible (skip welcome going back only to welcome)
+    if(current > 0) show(current-1, -1);
+  }
+
+  form.addEventListener('click', (e)=>{
+    const act = e.target.closest('[data-action]');
+    if(!act) return;
+    if(act.dataset.action === 'next') goNext();
+    if(act.dataset.action === 'prev') goPrev();
+  });
+
+  // Enter to advance on text steps
+  form.addEventListener('keydown', (e)=>{
+    if(e.key !== 'Enter') return;
+    const el = steps[current];
+    if(el.dataset.step==='welcome'){ e.preventDefault(); goNext(); return; }
+    if(el.querySelector('textarea') && e.target.tagName==='TEXTAREA' && !e.metaKey && !e.ctrlKey) return; // allow newlines
+    if(navRow.style.display==='flex'){ e.preventDefault(); goNext(); }
+  });
+
+  /* ---- submit ---- */
+  function collect(){
+    const get = (id)=> (document.getElementById(id)?.value || '').trim();
+    const pick = (name)=>{
+      const grp = form.querySelector(`.options[data-name="${name}"]`);
+      if(!grp) return '';
+      const c = grp.querySelector('[aria-checked="true"]');
+      if(!c) return '';
+      let v = c.dataset.value;
+      if(grp.dataset.other && v === grp.dataset.other){
+        const oi = grp.closest('.step').querySelector('.other-input');
+        v = 'Outro: ' + (oi?.value.trim() || '');
+      }
+      return v;
+    };
+    const submittedAt = new Date();
+    const lead = {
+      status: 'Novo Lead',
+      origem: 'Formulário Público',
+      enviadoEm: submittedAt.toISOString(),
+      enviadoEmLocal: submittedAt.toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo'}),
+      contato: {
+        nome: get('nome'),
+        email: get('email'),
+        whatsapp: get('whatsapp')
+      },
+      empresa: {
+        nome: get('empresa'),
+        segmento: get('segmento'),
+        cidade: get('cidade'),
+        estado: get('estado'),
+        siteAtual: get('site'),
+        instagram: get('instagram')
+      },
+      projeto: {
+        tipo: pick('tipoProjeto'),
+        objetivo: pick('objetivo'),
+        prazo: pick('prazo'),
+        investimento: pick('investimento'),
+        referencias: get('referencias'),
+        observacoes: get('observacoes')
+      }
+    };
+    lead.campos = {
+      nome: lead.contato.nome,
+      email: lead.contato.email,
+      whatsapp: lead.contato.whatsapp,
+      empresa: lead.empresa.nome,
+      segmento: lead.empresa.segmento,
+      cidade: lead.empresa.cidade,
+      estado: lead.empresa.estado,
+      siteAtual: lead.empresa.siteAtual,
+      instagram: lead.empresa.instagram,
+      tipoProjeto: lead.projeto.tipo,
+      objetivo: lead.projeto.objetivo,
+      prazo: lead.projeto.prazo,
+      investimento: lead.projeto.investimento,
+      referencias: lead.projeto.referencias,
+      observacoes: lead.projeto.observacoes
+    };
+    lead.analiseIA = analyzeLead(lead);
+    return lead;
+  }
+
+  function includesAny(value, terms){
+    const text = String(value || '').toLowerCase();
+    return terms.some(term => text.includes(term));
+  }
+
+  function analyzeLead(lead){
+    const tipo = lead.projeto.tipo;
+    const objetivo = lead.projeto.objetivo;
+    const investimento = lead.projeto.investimento;
+    const prazo = lead.projeto.prazo;
+    const obs = lead.projeto.observacoes + ' ' + lead.projeto.referencias;
+    let complexidade = 'Baixa';
+
+    if(includesAny(tipo, ['e-commerce','sistema web','aplicativo']) ||
+       includesAny(obs, ['integração','integracao','login','dashboard','painel','pagamento','assinatura','automação','automacao','api'])){
+      complexidade = 'Alta';
+    } else if(includesAny(tipo, ['site institucional']) ||
+              includesAny(objetivo, ['vender produtos online','automatizar processos']) ||
+              includesAny(investimento, ['5.000','10.000','acima'])){
+      complexidade = 'Média';
+    }
+
+    const escopo = [];
+    if(includesAny(tipo, ['landing page'])){
+      escopo.push('Landing page estratégica com seções de oferta, prova social, benefícios, FAQ e CTA para conversão');
+    } else if(includesAny(tipo, ['site institucional'])){
+      escopo.push('Site institucional com página inicial, serviços, sobre, portfólio/provas, contato e SEO local');
+    } else if(includesAny(tipo, ['e-commerce'])){
+      escopo.push('Loja virtual com catálogo, páginas de produto, checkout, meios de pagamento e gestão de pedidos');
+    } else if(includesAny(tipo, ['sistema web'])){
+      escopo.push('Sistema web com autenticação, painel administrativo, fluxos principais e integrações necessárias');
+    } else if(includesAny(tipo, ['aplicativo'])){
+      escopo.push('Aplicativo ou MVP com definição de jornadas, protótipo, funcionalidades principais e plano técnico');
+    } else {
+      escopo.push('Diagnóstico do projeto e definição de escopo sob medida antes da proposta');
+    }
+
+    if(includesAny(objetivo, ['gerar mais clientes'])){
+      escopo.push('Estrutura de conversão com chamadas para WhatsApp/formulário, copy de vendas e mensuração de leads');
+    }
+    if(includesAny(objetivo, ['credibilidade','apresentar meus serviços'])){
+      escopo.push('Conteúdo institucional, diferenciais, autoridade, portfólio e apresentação clara dos serviços');
+    }
+    if(includesAny(objetivo, ['automatizar processos'])){
+      escopo.push('Mapeamento de processo, automações e integrações para reduzir trabalho manual');
+    }
+
+    let faixaValor = 'A partir de R$ 999';
+    if(complexidade === 'Média') faixaValor = 'Entre R$ 1.899 e R$ 5.000';
+    if(complexidade === 'Alta') faixaValor = 'A partir de R$ 5.000';
+    if(investimento === 'Até R$ 2.000') faixaValor = 'Até R$ 2.000, com recomendação de escopo enxuto';
+    if(investimento === 'R$ 2.000 a R$ 5.000') faixaValor = 'Entre R$ 2.000 e R$ 5.000';
+    if(investimento === 'R$ 5.000 a R$ 10.000') faixaValor = 'Entre R$ 5.000 e R$ 10.000';
+    if(investimento === 'Acima de R$ 10.000') faixaValor = 'Acima de R$ 10.000';
+
+    const urgencia = includesAny(prazo, ['imediatamente','30 dias']) ? 'com intenção de iniciar em curto prazo' : 'ainda em fase de planejamento ou pesquisa';
+    const resumoExecutivo = `${lead.empresa.nome || 'Empresa'} do segmento ${lead.empresa.segmento || 'não informado'} buscando ${tipo || 'um projeto digital'} com foco em ${String(objetivo || 'objetivo a definir').toLowerCase()}, ${urgencia}.`;
+
+    return {
+      resumoExecutivo,
+      complexidade,
+      escopoSugerido: escopo,
+      faixaValorSugerida: faixaValor
+    };
+  }
+
+  function saveFallback(payload){
+    const key = 'udlabs_public_leads';
+    const current = JSON.parse(localStorage.getItem(key) || '[]');
+    current.push(payload);
+    localStorage.setItem(key, JSON.stringify(current));
+  }
+
+  async function submit(){
+    const payload = collect();
+    nextBtn.disabled = true;
+    nextBtn.innerHTML = '<span class="spin"></span> Enviando…';
+    try{
+      if(ENDPOINT){
+        await fetch(ENDPOINT, {
+          method:'POST', mode:'no-cors',
+          headers:{'Content-Type':'text/plain;charset=utf-8'},
+          body: JSON.stringify(payload)
+        });
+      } else {
+        saveFallback(payload);
+        console.info('[Briefing] ENDPOINT não configurado — lead salvo localmente:', payload);
+      }
+    }catch(err){
+      saveFallback(payload);
+      console.error('[Briefing] erro no envio; lead salvo localmente:', err);
+    }
+    try{ gtag('event','generate_lead',{event_category:'briefing',value:1}); }catch(e){}
+    nextBtn.disabled = false;
+    nextBtn.innerHTML = 'Continuar <span class="arr">→</span>';
+    // ir para tela de sucesso
+    const doneIdx = steps.findIndex(s=>s.dataset.step==='done');
+    show(doneIdx);
+  }
+
+  // limpa erro ao digitar
+  form.addEventListener('input', (e)=>{
+    const fld = e.target.closest('.field.invalid');
+    if(fld) fld.classList.remove('invalid');
+  });
+
+  // start
+  show(0);
+})();
+</script>
+</body>
+</html>
