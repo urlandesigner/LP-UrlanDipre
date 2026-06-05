@@ -71,7 +71,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0B0A0F;
@@ -100,7 +100,7 @@
     content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.045;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  h1,h2,h3,.serif{font-family:'Newsreader',Georgia,serif;font-weight:400;line-height:1.02;letter-spacing:-.025em}
+  h1,h2,h3,.serif{font-family:'Lora',Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.01em}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:2}
   a{color:inherit;text-decoration:none}
   .accent{color:var(--brand-2)}
@@ -168,8 +168,8 @@
     background:linear-gradient(160deg,rgba(28,22,40,.96),rgba(16,13,22,.96));border:1px solid var(--line);
     border-radius:14px;box-shadow:0 24px 50px -20px rgba(0,0,0,.7);padding:14px 18px;display:flex;align-items:center;gap:12px;transform:rotate(-2.5deg)}
   .float-card .fi{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;
-    color:#fff;font-weight:700;font-family:'Newsreader';font-size:1.1rem}
-  .float-card b{font-family:'Newsreader';font-size:1.1rem;font-weight:500;display:block}
+    color:#fff;font-weight:700;font-family:'Lora';font-size:1.1rem}
+  .float-card b{font-family:'Lora';font-size:1.1rem;font-weight:500;display:block}
   .float-card span{font-size:.78rem;color:var(--ink-soft)}
   @media(max-width:880px){
     .hero-grid{grid-template-columns:1fr;gap:54px}
@@ -183,7 +183,7 @@
   .strip-in{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
   .strip-in .it{padding:30px 22px;text-align:center;border-right:1px solid var(--line-soft)}
   .strip-in .it:last-child{border-right:none}
-  .strip-in .num{font-family:'Newsreader';font-size:2.1rem;font-weight:500;color:var(--ink);line-height:1}
+  .strip-in .num{font-family:'Lora';font-size:2.1rem;font-weight:500;color:var(--ink);line-height:1}
   .strip-in .num .accent{color:var(--brand-2)}
   .strip-in .lbl{font-size:.84rem;color:var(--ink-soft);margin-top:8px;letter-spacing:.02em}
   @media(max-width:760px){.strip-in{grid-template-columns:1fr 1fr}.strip-in .it:nth-child(2){border-right:none}
@@ -198,8 +198,8 @@
   .pains{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden}
   .pain{background:var(--bg);padding:32px 26px;transition:background .25s}
   .pain:hover{background:var(--panel)}
-  .pain .x{font-family:'Newsreader';font-size:1.7rem;color:var(--brand-2);margin-bottom:18px;font-style:italic}
-  .pain b{font-family:'Newsreader';font-size:1.25rem;font-weight:500;display:block;margin-bottom:8px}
+  .pain .x{font-family:'Lora';font-size:1.7rem;color:var(--brand-2);margin-bottom:18px;font-style:italic}
+  .pain b{font-family:'Lora';font-size:1.25rem;font-weight:500;display:block;margin-bottom:8px}
   .pain p{color:var(--ink-soft);font-size:.95rem}
   @media(max-width:880px){.pains{grid-template-columns:1fr 1fr}}
   @media(max-width:520px){.pains{grid-template-columns:1fr}}
@@ -218,8 +218,8 @@
   .price-card h3{font-size:1.7rem;font-weight:500;margin-bottom:6px}
   .price-card .desc{color:var(--ink-soft);font-size:.96rem;margin-bottom:24px}
   .price{display:flex;align-items:baseline;gap:7px;margin-bottom:28px;padding-bottom:26px;border-bottom:1px solid var(--line-soft)}
-  .price .cur{font-family:'Newsreader';font-size:1.3rem;font-weight:400;color:var(--ink-soft)}
-  .price .val{font-family:'Newsreader';font-size:3rem;font-weight:500;letter-spacing:-.03em}
+  .price .cur{font-family:'Lora';font-size:1.3rem;font-weight:400;color:var(--ink-soft)}
+  .price .val{font-family:'Lora';font-size:3rem;font-weight:500;letter-spacing:-.03em}
   .price .per{color:var(--ink-soft);font-size:.9rem;align-self:flex-end;margin-bottom:10px}
   .price .from{flex-basis:100%;font-size:.76rem;text-transform:uppercase;letter-spacing:.13em;color:var(--brand-2);font-weight:700;margin-bottom:-4px}
   .feats{list-style:none;margin-bottom:32px;display:flex;flex-direction:column;gap:14px;flex:1}
@@ -250,9 +250,9 @@
   .port-item:hover .port-meta b{color:var(--brand-2)}
   .port-meta b{transition:color .2s}
   .visit{flex:none;color:var(--brand-2);font-size:.78rem;font-weight:600;display:inline-flex;align-items:center;gap:5px;opacity:.85}
-  .port-meta b{font-family:'Newsreader';font-size:1.08rem;font-weight:500}
+  .port-meta b{font-family:'Lora';font-size:1.08rem;font-weight:500}
   .port-meta em{font-style:normal;color:var(--ink-soft);font-size:.85rem}
-  .ph-note{text-align:center;color:var(--ink-soft);font-size:.86rem;margin-top:26px;font-style:italic;font-family:'Newsreader'}
+  .ph-note{text-align:center;color:var(--ink-soft);font-size:.86rem;margin-top:26px;font-style:italic;font-family:'Lora'}
   @media(max-width:880px){.port{grid-template-columns:1fr 1fr}}
   @media(max-width:520px){.port{grid-template-columns:1fr}}
 
@@ -267,14 +267,14 @@
   .about-photo .ph span{font-size:.86rem}
   .about-badge{position:absolute;bottom:-18px;right:-18px;background:linear-gradient(160deg,rgba(28,22,40,.96),rgba(16,13,22,.96));
     border:1px solid var(--line);border-radius:14px;padding:13px 18px;box-shadow:0 24px 50px -20px rgba(0,0,0,.7)}
-  .about-badge b{font-family:'Newsreader';font-size:1.45rem;font-weight:500;display:block;color:var(--brand-2);line-height:1}
+  .about-badge b{font-family:'Lora';font-size:1.45rem;font-weight:500;display:block;color:var(--brand-2);line-height:1}
   .about-badge span{font-size:.76rem;color:var(--ink-soft)}
   .about-lead{color:var(--ink-soft);font-size:1.08rem;line-height:1.72;margin-bottom:18px;max-width:560px}
   .about-stats{display:flex;gap:36px;margin:30px 0 32px;flex-wrap:wrap}
-  .about-stats .s b{font-family:'Newsreader';font-size:1.9rem;font-weight:500;color:var(--ink);display:block;line-height:1;margin-bottom:5px}
+  .about-stats .s b{font-family:'Lora';font-size:1.9rem;font-weight:500;color:var(--ink);display:block;line-height:1;margin-bottom:5px}
   .about-stats .s b em{font-style:italic;color:var(--brand-2)}
   .about-stats .s span{font-size:.84rem;color:var(--ink-soft)}
-  .about-sign{font-family:'Newsreader';font-style:italic;font-size:1.35rem;color:var(--ink);margin-top:26px}
+  .about-sign{font-family:'Lora';font-style:italic;font-size:1.35rem;color:var(--ink);margin-top:26px}
   @media(max-width:880px){#sobre .about-grid{grid-template-columns:1fr;gap:50px}
     .about-photo{max-width:340px;margin:0 auto 8px}.about-badge{right:8px}}
 
@@ -282,16 +282,16 @@
   #como{background:var(--bg-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);border-radius:var(--radius);overflow:hidden}
   .step{background:var(--bg-2);padding:38px 30px}
-  .step .n{font-family:'Newsreader';font-size:3rem;font-weight:300;color:var(--brand-2);line-height:1;margin-bottom:18px}
+  .step .n{font-family:'Lora';font-size:3rem;font-weight:300;color:var(--brand-2);line-height:1;margin-bottom:18px}
   .step .n em{font-style:italic}
-  .step b{font-family:'Newsreader';font-size:1.4rem;font-weight:500;display:block;margin-bottom:10px}
+  .step b{font-family:'Lora';font-size:1.4rem;font-weight:500;display:block;margin-bottom:10px}
   .step p{color:var(--ink-soft);font-size:.97rem}
   @media(max-width:760px){.steps{grid-template-columns:1fr}}
 
   /* FAQ */
   .faq{max-width:780px;margin:0 auto}
   .faq-item{border-bottom:1px solid var(--line-soft)}
-  .faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;font-family:'Newsreader';
+  .faq-q{width:100%;background:none;border:none;cursor:pointer;text-align:left;font-family:'Lora';
     font-weight:500;font-size:1.32rem;color:var(--ink);padding:26px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;transition:color .2s}
   .faq-q:hover{color:var(--brand-2)}
   .faq-q .pm{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);color:var(--brand-2);
@@ -466,9 +466,9 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow reveal">Criação de sites premium</span>
-      <h1 class="reveal d1">Criação de sites profissionais à altura do <span class="accent-i">seu negócio</span>.</h1>
-      <p class="sub reveal d2">Design sofisticado, performance impecável e tudo pronto para o Google. Preço fechado, entrega em poucos dias e você fala direto comigo.</p>
+      <span class="eyebrow reveal">Designer de produto · 15 anos</span>
+      <h1 class="reveal d1">Um site à altura do <span class="accent-i">seu negócio.</span></h1>
+      <p class="sub reveal d2">Seu negócio encontrado no Google, com um site rápido e bonito que transforma visita em cliente. Preço fechado, entrega média de 7 dias e você fala direto comigo.</p>
       <div class="hero-cta reveal d3">
         <a class="btn btn-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20um%20site%20para%20o%20meu%20neg%C3%B3cio.%20Pode%20me%20passar%20um%20or%C3%A7amento%3F" target="_blank" rel="noopener">
           <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
