@@ -542,6 +542,40 @@
     /* Keep content clear of the floating WhatsApp button */
     footer{padding-bottom:96px}
   }
+
+  /* Other services — editorial discreto, layout assimétrico */
+  .other-services{padding:40px 0 28px;border-top:1px solid var(--line-soft)}
+  .os-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:56px;align-items:start}
+  .os-intro-col{display:flex;flex-direction:column;gap:14px;max-width:360px}
+  .os-lede{margin:6px 0 0;color:var(--ink);font-family:'Lora',serif;font-style:italic;font-weight:400;font-size:1.06rem;line-height:1.45;letter-spacing:-.005em}
+  .os-cta{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-size:.86rem;font-weight:500;text-decoration:none;width:fit-content;padding:0 0 2px;border-bottom:1px solid var(--line);letter-spacing:.01em;transition:color .28s ease, border-color .28s ease}
+  .os-cta-arrow{display:inline-block;transition:transform .28s cubic-bezier(.22,1,.36,1)}
+  .os-cta:hover{color:var(--brand-2);border-bottom-color:var(--brand-2)}
+  .os-cta:hover .os-cta-arrow{transform:translateX(4px)}
+
+  .os-list{list-style:none;margin:0;padding:0}
+  .os-list li + li{border-top:1px solid var(--line-soft)}
+  .os-item{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;column-gap:22px;padding:16px 8px;color:var(--ink);text-decoration:none;border-radius:10px;transition:color .3s ease, padding .3s cubic-bezier(.22,1,.36,1), background .3s ease}
+  .os-num{font-family:'Hanken Grotesk',sans-serif;font-variant-numeric:tabular-nums;font-size:.74rem;font-weight:500;color:var(--ink-soft);letter-spacing:.06em}
+  .os-name{font-family:'Hanken Grotesk',sans-serif;font-size:1.04rem;font-weight:500;line-height:1.2;letter-spacing:-.005em}
+  .os-arrow{color:var(--ink-soft);font-size:1rem;opacity:.5;transition:opacity .3s ease, transform .3s cubic-bezier(.22,1,.36,1), color .3s ease}
+  @media (hover: hover){
+    .os-arrow{opacity:0;transform:translateX(-8px)}
+    .os-item:hover{padding-left:14px;background:linear-gradient(90deg,rgba(162,85,253,.05),transparent)}
+    .os-item:hover .os-name{color:var(--ink)}
+    .os-item:hover .os-num{color:var(--brand-2)}
+    .os-item:hover .os-arrow{opacity:1;transform:translateX(0);color:var(--brand-2)}
+  }
+  .os-item:focus-visible{outline:2px solid var(--brand-2);outline-offset:3px}
+
+  @media(max-width:760px){
+    .other-services{padding:30px 0 22px}
+    .os-grid{grid-template-columns:1fr;gap:24px}
+    .os-intro-col{max-width:none}
+    .os-lede{font-size:1rem}
+    .os-item{padding:14px 4px;column-gap:16px}
+    .os-name{font-size:1rem}
+  }
 </style>
 </head>
 <body>
@@ -822,6 +856,33 @@
       <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
       Falar no WhatsApp agora
     </a>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section class="other-services" aria-labelledby="os-title">
+  <div class="wrap os-grid reveal">
+    <div class="os-intro-col">
+      <span class="eyebrow">Outros serviços</span>
+      <p class="os-lede" id="os-title">A UD Labs também atua com projetos sob consulta.</p>
+      <a class="os-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20saber%20sobre%20outros%20servi%C3%A7os%20da%20UD%20Labs." target="_blank" rel="noopener">
+        Fale comigo <span class="os-cta-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+    <ul class="os-list">
+      <li><a class="os-item" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Sistemas%20Web." target="_blank" rel="noopener">
+        <span class="os-num">01</span><span class="os-name">Sistemas Web</span><span class="os-arrow" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="os-item" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Aplicativos." target="_blank" rel="noopener">
+        <span class="os-num">02</span><span class="os-name">Aplicativos</span><span class="os-arrow" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="os-item" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20em%20UX%2FUI%20Design." target="_blank" rel="noopener">
+        <span class="os-num">03</span><span class="os-name">UX/UI Design</span><span class="os-arrow" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="os-item" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20interesse%20em%20Consultoria%20Digital." target="_blank" rel="noopener">
+        <span class="os-num">04</span><span class="os-name">Consultoria Digital</span><span class="os-arrow" aria-hidden="true">↗</span>
+      </a></li>
+    </ul>
   </div>
 </section>
 
