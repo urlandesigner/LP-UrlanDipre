@@ -164,13 +164,8 @@
   .eyebrow::before{content:"";width:26px;height:1px;background:var(--brand-2);opacity:.6}
 
   /* Logo */
-  /* Logo — text wordmark */
-  .brand-logo{display:inline-flex;align-items:baseline;gap:.16em;font-family:'Hanken Grotesk',sans-serif;
-    font-weight:700;font-size:1.34rem;letter-spacing:-.015em;line-height:1;white-space:nowrap;color:var(--ink)}
-  .brand-logo .ud{font-weight:800;background:linear-gradient(135deg,var(--brand),var(--brand-2));
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-  .brand-logo .labs{font-weight:600;color:var(--ink)}
-  .foot-logo{font-size:1.18rem}
+  .brand-logo{display:block;width:auto;height:34px}
+  .foot-logo{height:30px}
 
   /* Buttons */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
@@ -590,7 +585,7 @@
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-in">
-    <a href="#" aria-label="UD Labs · Início"><span class="brand-logo"><span class="ud">UD</span><span class="labs">Labs</span></span></a>
+    <a href="#" aria-label="UD Labs · Início"><img class="brand-logo" src="udlabs.svg" alt="UD Labs" width="1371" height="408" decoding="async"></a>
     <nav class="nav-links">
       <a href="#portfolio">Portfólio</a>
       <a href="#sobre">Sobre</a>
@@ -898,7 +893,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="wrap foot-in">
-    <span class="brand-logo foot-logo"><span class="ud">UD</span><span class="labs">Labs</span></span>
+    <img class="brand-logo foot-logo" src="udlabs.svg" alt="UD Labs" width="1371" height="408" loading="lazy" decoding="async">
     <nav class="foot-links">
       <a href="#pacotes">Pacotes</a>
       <a href="#portfolio">Portfólio</a>
