@@ -116,7 +116,7 @@
   .top-back:hover{color:var(--ink)}
 
   /* Progress */
-  .progress-shell{position:relative;z-index:5;max-width:var(--maxw);margin:18px auto 0;padding:0 24px;
+  .progress-shell{position:relative;z-index:5;width:100%;max-width:var(--maxw);margin:18px auto 0;padding:0 24px;
     opacity:0;transition:opacity .4s ease}
   .progress-shell.show{opacity:1}
   .progress-meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px;
@@ -469,7 +469,7 @@
    Para integrar ao sistema, defina window.UD_LEAD_ENDPOINT antes deste script
    ou substitua o valor de ENDPOINT por uma URL de API/Webhook.
    ========================================================================= */
-const ENDPOINT = window.UD_LEAD_ENDPOINT || "";
+const ENDPOINT = window.UD_LEAD_ENDPOINT || "https://script.google.com/macros/s/AKfycbx2XlvnYZbn3dfSH_ubaliF5lz3OpBmXQUTvZabg8YedfMefB-B9CnLjjo2BtVyylw/exec";
 
 (function(){
   const form      = document.getElementById('wizard');
@@ -756,6 +756,28 @@ const ENDPOINT = window.UD_LEAD_ENDPOINT || "";
     localStorage.setItem(key, JSON.stringify(current));
   }
 
+  // achata o lead aninhado num objeto plano que o Google Apps Script grava como 1 linha
+  function flatten(lead){
+    const c = lead.campos || {};
+    const a = lead.analiseIA || {};
+    return {
+      dataHora: lead.enviadoEmLocal || new Date().toLocaleString('pt-BR'),
+      status: lead.status || 'Novo Lead',
+      nome: c.nome || '', email: c.email || '', whatsapp: c.whatsapp || '',
+      empresa: c.empresa || '', segmento: c.segmento || '',
+      cidade: c.cidade || '', estado: c.estado || '',
+      site: c.siteAtual || '', instagram: c.instagram || '',
+      tipoProjeto: c.tipoProjeto || '', objetivo: c.objetivo || '',
+      prazo: c.prazo || '', investimento: c.investimento || '',
+      referencias: c.referencias || '', observacoes: c.observacoes || '',
+      origem: lead.origem || 'Formulário Público',
+      iaResumo: a.resumoExecutivo || '',
+      iaComplexidade: a.complexidade || '',
+      iaEscopo: Array.isArray(a.escopoSugerido) ? a.escopoSugerido.join(' • ') : '',
+      iaFaixaValor: a.faixaValorSugerida || ''
+    };
+  }
+
   async function submit(){
     const payload = collect();
     nextBtn.disabled = true;
@@ -765,7 +787,7 @@ const ENDPOINT = window.UD_LEAD_ENDPOINT || "";
         await fetch(ENDPOINT, {
           method:'POST', mode:'no-cors',
           headers:{'Content-Type':'text/plain;charset=utf-8'},
-          body: JSON.stringify(payload)
+          body: JSON.stringify(flatten(payload))
         });
       } else {
         saveFallback(payload);
