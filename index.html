@@ -166,6 +166,20 @@
   /* Logo */
   .brand-logo{display:block;width:auto;height:34px}
   .foot-logo{height:30px}
+  /* Header logo: ícone estático + texto deslizando (UD Labs ↔ Urlan Dipré) */
+  .brand-swap{display:inline-flex;align-items:center;gap:0;height:34px}
+  .brand-swap .logo-icon{height:34px;width:auto;display:block;flex:0 0 auto}
+  .brand-swap .logo-words{height:34px;overflow:hidden;display:block}
+  .brand-swap .logo-track{display:flex;flex-direction:column;align-items:flex-start;animation:wordSlide 7s cubic-bezier(.76,0,.24,1) infinite}
+  .brand-swap .logo-track img{height:34px;width:auto;display:block;flex:0 0 auto}
+  @keyframes wordSlide{
+    0%,22%   {transform:translateY(0)}
+    33%,55%  {transform:translateY(-34px)}
+    66%,100% {transform:translateY(-68px)}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .brand-swap .logo-track{animation:none;transform:translateY(0)}
+  }
 
   /* Buttons */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
@@ -585,7 +599,7 @@
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-in">
-    <a href="#" aria-label="UD Labs · Início"><img class="brand-logo" src="udlabs.svg" alt="UD Labs" width="1371" height="408" decoding="async"></a>
+    <a href="#" class="brand-swap" aria-label="UD Labs · Início"><img class="logo-icon" src="logo-icon.svg" alt="" aria-hidden="true" width="409" height="408" decoding="async"><span class="logo-words"><span class="logo-track"><img src="word-udlabs.svg" alt="UD Labs" width="916" height="408" decoding="async"><img src="word-urlandipre.svg" alt="Urlan Dipré" width="1214" height="408" decoding="async"><img src="word-udlabs.svg" alt="" aria-hidden="true" width="916" height="408" decoding="async"></span></span></a>
     <nav class="nav-links">
       <a href="#portfolio">Portfólio</a>
       <a href="#sobre">Sobre</a>
@@ -893,7 +907,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="wrap foot-in">
-    <img class="brand-logo foot-logo" src="udlabs.svg" alt="UD Labs" width="1371" height="408" loading="lazy" decoding="async">
+    <img class="brand-logo foot-logo" src="logo-udlabs.svg" alt="UD Labs" width="1325" height="408" loading="lazy" decoding="async">
     <nav class="foot-links">
       <a href="#pacotes">Pacotes</a>
       <a href="#portfolio">Portfólio</a>
