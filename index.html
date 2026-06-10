@@ -51,7 +51,7 @@
       "logo": "https://udlabs.com.br/apple-touch-icon.png",
       "description": "Estúdio digital especializado na criação de sites profissionais, landing pages e soluções digitais rápidas e otimizadas para o Google, com preço fechado e atendimento próximo.",
       "telephone": "+55 27 99993-8876",
-      "priceRange": "R$ 999–R$ 2.999+",
+      "priceRange": "R$ 999+",
       "areaServed": {"@type": "Country", "name": "Brasil"},
       "founder": {"@id": "https://udlabs.com.br/#person"},
       "sameAs": [
@@ -81,9 +81,6 @@
             "@type": "Offer",
             "name": "Site Sob Medida",
             "description": "Projetos maiores com integrações e funcionalidades avançadas, sob proposta personalizada.",
-            "price": "2999",
-            "priceCurrency": "BRL",
-            "priceSpecification": {"@type": "PriceSpecification", "minPrice": "2999", "priceCurrency": "BRL"},
             "url": "https://udlabs.com.br/#pacotes"
           }
         ]
@@ -115,7 +112,7 @@
         {"@type":"Question","name":"Eu preciso entender de tecnologia?","acceptedAnswer":{"@type":"Answer","text":"Não. Você conta sobre o negócio e envia o conteúdo. A UD Labs cuida de toda a parte técnica e entrega tudo funcionando."}},
         {"@type":"Question","name":"O domínio e a hospedagem estão inclusos?","acceptedAnswer":{"@type":"Answer","text":"O desenvolvimento está incluso no valor. Domínio e hospedagem têm custo anual à parte, e a UD Labs orienta na escolha e faz a configuração."}},
         {"@type":"Question","name":"Posso atualizar o site depois?","acceptedAnswer":{"@type":"Answer","text":"Sim. Pequenos ajustes e pacotes opcionais de manutenção podem ser combinados, sem mensalidade obrigatória."}},
-        {"@type":"Question","name":"E se eu quiser algo diferente dos pacotes?","acceptedAnswer":{"@type":"Answer","text":"Projetos com páginas extras, catálogo, blog, agendamento ou integrações especiais entram no Site Sob Medida, com proposta personalizada a partir de R$ 2.999."}},
+        {"@type":"Question","name":"E se eu quiser algo diferente dos pacotes?","acceptedAnswer":{"@type":"Answer","text":"Projetos com páginas extras, catálogo, blog, agendamento ou integrações especiais entram no Site Sob Medida, com proposta personalizada conforme o escopo do projeto."}},
         {"@type":"Question","name":"Como funciona o pagamento?","acceptedAnswer":{"@type":"Answer","text":"Normalmente uma parte é paga na contratação e o restante na entrega. São aceitos Pix, cartão e transferência."}}
       ]
     }
@@ -345,6 +342,9 @@
   .price .val{font-family:'Lora';font-size:3rem;font-weight:500;letter-spacing:-.03em}
   .price .per{color:var(--ink-soft);font-size:.9rem;align-self:flex-end;margin-bottom:10px}
   .price .from{flex-basis:100%;font-size:.76rem;text-transform:uppercase;letter-spacing:.13em;color:var(--brand-2);font-weight:700;margin-bottom:-4px}
+  .price-quote{flex-direction:column;align-items:flex-start;gap:5px}
+  .price .val-text{font-family:'Lora';font-size:2.05rem;font-weight:500;letter-spacing:-.01em;line-height:1.15}
+  .price .quote-cap{font-size:.76rem;text-transform:uppercase;letter-spacing:.13em;color:var(--brand-2);font-weight:700}
   .feats{list-style:none;margin-bottom:32px;display:flex;flex-direction:column;gap:14px;flex:1}
   .feats li{display:flex;gap:13px;align-items:flex-start;font-size:.94rem;color:var(--ink)}
   .feats li .ck{flex:none;width:20px;height:20px;border-radius:50%;border:1px solid var(--brand-2);color:var(--brand-2);
@@ -744,7 +744,7 @@
       <div class="price-card reveal d3">
         <h3>Site Sob Medida</h3>
         <p class="desc">Para projetos maiores, integrações e necessidades específicas.</p>
-        <div class="price"><span class="from">A partir de</span><span class="cur">R$</span><span class="val">2.999</span></div>
+        <div class="price price-quote"><span class="val-text">Conforme projeto</span><span class="quote-cap">Conforme o escopo do projeto</span></div>
         <ul class="feats">
           <li><span class="ck">✓</span>Estrutura planejada conforme seus objetivos</li>
           <li><span class="ck">✓</span>Integrações e funcionalidades avançadas</li>
@@ -752,11 +752,11 @@
           <li><span class="ck">✓</span>Estratégia e proposta personalizadas</li>
           <li><span class="ck">✓</span>Prazo e suporte definidos para o projeto</li>
         </ul>
-        <a class="btn btn-ghost" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20o%20Site%20Sob%20Medida%20(a%20partir%20de%20R%242.999)." target="_blank" rel="noopener">Solicitar orçamento</a>
+        <a class="btn btn-ghost" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20o%20Site%20Sob%20Medida." target="_blank" rel="noopener">Solicitar orçamento</a>
       </div>
 
     </div>
-    <p class="price-note reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Essencial e Profissional têm preço fechado. Projetos Sob Medida começam em R$ 2.999 e recebem uma proposta conforme a necessidade.</p>
+    <p class="price-note reveal d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Essencial e Profissional têm preço fechado. Projetos Sob Medida recebem uma proposta personalizada conforme o escopo e a necessidade.</p>
   </div>
 </section>
 
@@ -848,7 +848,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">E se eu quiser algo diferente dos pacotes?<span class="pm">+</span></button>
-        <div class="faq-a"><p>Projetos com páginas extras, catálogo, blog, agendamento ou integrações especiais entram no Site Sob Medida. O investimento começa em R$ 2.999 e você recebe uma proposta personalizada antes de começar.</p></div>
+        <div class="faq-a"><p>Projetos com páginas extras, catálogo, blog, agendamento ou integrações especiais entram no Site Sob Medida. Você recebe uma proposta personalizada antes de começar, conforme o escopo do projeto.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Como funciona o pagamento?<span class="pm">+</span></button>
