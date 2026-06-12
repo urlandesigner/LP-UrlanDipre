@@ -248,6 +248,7 @@
   .mobile-menu.open .menu-links a:nth-child(3){transition-delay:.22s}
   .mobile-menu.open .menu-links a:nth-child(4){transition-delay:.28s}
   .mobile-menu.open .menu-links a:nth-child(5){transition-delay:.34s}
+  .mobile-menu.open .menu-links a:nth-child(6){transition-delay:.40s}
   .menu-foot{position:relative;margin-top:auto;padding-top:26px}
   .menu-foot .btn{width:100%}
   .menu-note{margin-top:15px;text-align:center;font-size:.82rem;color:var(--ink-soft);letter-spacing:.01em}
@@ -323,6 +324,91 @@
   .pain p{color:var(--ink-soft);font-size:.95rem}
   @media(max-width:880px){.pains{grid-template-columns:1fr 1fr}}
   @media(max-width:520px){.pains{grid-template-columns:1fr}}
+
+  /* Diagnóstico gratuito */
+  .diag{padding:30px 0 100px}
+  .diag-panel{position:relative;display:grid;grid-template-columns:1.04fr .96fr;gap:58px;align-items:center;
+    padding:56px 56px;border-radius:26px;overflow:hidden;
+    background:linear-gradient(158deg,rgba(46,28,78,.72),rgba(18,14,28,.86) 64%);
+    border:1px solid rgba(162,85,253,.22);
+    box-shadow:0 50px 120px -50px rgba(113,32,209,.55), inset 0 1px 0 rgba(255,255,255,.05)}
+  .diag-panel::before{content:"";position:absolute;top:-160px;right:-120px;width:460px;height:460px;border-radius:50%;
+    background:radial-gradient(circle,rgba(162,85,253,.30),transparent 64%);filter:blur(12px);pointer-events:none;z-index:0}
+  .diag-panel::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5;
+    background-image:linear-gradient(rgba(162,85,253,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(162,85,253,.05) 1px,transparent 1px);
+    background-size:40px 40px;mask-image:radial-gradient(ellipse at 70% 40%,#000,transparent 72%)}
+  .diag-panel > *{position:relative;z-index:1}
+  .diag-tag{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.72rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--brand-2);background:rgba(162,85,253,.12);border:1px solid rgba(162,85,253,.26);
+    padding:7px 14px;border-radius:999px}
+  .diag-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--brand-2);box-shadow:0 0 0 0 rgba(162,85,253,.6);animation:diagPulse 2.2s ease-out infinite}
+  @keyframes diagPulse{0%{box-shadow:0 0 0 0 rgba(162,85,253,.55)}70%{box-shadow:0 0 0 9px rgba(162,85,253,0)}100%{box-shadow:0 0 0 0 rgba(162,85,253,0)}}
+  .diag-h{font-family:'Lora',serif;font-size:clamp(1.95rem,3.7vw,2.85rem);font-weight:300;line-height:1.06;letter-spacing:-.01em;margin:20px 0 16px}
+  .diag-h b{font-weight:600}
+  .diag-lede{color:var(--ink-soft);font-size:1.08rem;line-height:1.62;max-width:480px;margin-bottom:30px}
+  .diag-lede b{color:var(--ink);font-weight:600}
+  .diag-feats{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;margin-bottom:34px}
+  .diag-feat{display:flex;align-items:flex-start;gap:12px}
+  .diag-feat .ic{flex:none;width:38px;height:38px;padding:0;border-radius:11px;display:grid;place-items:center;
+    background:linear-gradient(150deg,rgba(162,85,253,.20),rgba(113,32,209,.10));border:1px solid rgba(162,85,253,.24);color:var(--brand-2)}
+  .diag-feat .ic svg{width:19px;height:19px;display:block}
+  .diag-feat span{font-size:.96rem;color:var(--ink);font-weight:500;line-height:1.35;padding-top:8px}
+  .diag-cta-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .diag-trust{display:flex;align-items:center;gap:8px;font-size:.86rem;color:var(--ink-soft);font-weight:500}
+  .diag-trust svg{width:17px;height:17px;color:var(--brand-2);flex:none}
+
+  /* Scan visual */
+  .scan{position:relative;perspective:1200px}
+  .scan-win{position:relative;border-radius:16px;overflow:hidden;transform:rotate(-1.4deg);
+    background:linear-gradient(165deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+    border:1px solid var(--line);box-shadow:0 40px 90px -42px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.06)}
+  .scan-bar{height:40px;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid var(--line-soft);background:rgba(0,0,0,.18)}
+  .scan-bar i{width:9px;height:9px;border-radius:50%;background:rgba(241,238,246,.2)}
+  .scan-url{margin-left:12px;background:rgba(0,0,0,.32);border-radius:6px;height:22px;flex:1;max-width:170px;display:flex;align-items:center;padding:0 12px;font-size:.68rem;color:var(--ink-soft);font-weight:600;letter-spacing:.02em}
+  .scan-body{position:relative;padding:26px 24px 30px;min-height:264px;overflow:hidden}
+  .scan-body .sh{height:13px;width:48%;background:var(--ink);opacity:.9;border-radius:5px;margin-bottom:11px}
+  .scan-body .sl{height:8px;background:var(--line);border-radius:5px;margin-bottom:8px}
+  .scan-body .sl.w1{width:82%}.scan-body .sl.w2{width:68%}
+  .scan-body .sbtn{margin-top:16px;height:30px;width:120px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));opacity:.55}
+  .scan-body .stiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-top:22px}
+  .scan-body .stiles div{height:50px;border-radius:9px;background:linear-gradient(135deg,rgba(162,85,253,.14),rgba(113,32,209,.06))}
+  .scan-line{position:absolute;left:0;right:0;top:0;height:88px;pointer-events:none;z-index:3;
+    background:linear-gradient(to bottom,transparent,rgba(162,85,253,.16)60%,rgba(162,85,253,.42));
+    border-bottom:1.5px solid var(--brand-2);box-shadow:0 0 22px 2px rgba(162,85,253,.45);
+    animation:scanMove 3.4s cubic-bezier(.5,0,.5,1) infinite}
+  @keyframes scanMove{0%{transform:translateY(-90px);opacity:0}12%{opacity:1}88%{opacity:1}100%{transform:translateY(264px);opacity:0}}
+  /* Annotation markers */
+  .mark{position:absolute;z-index:4;display:flex;align-items:center;gap:8px}
+  .mark .pin{width:24px;height:24px;border-radius:50%;flex:none;display:grid;place-items:center;
+    font-family:'Hanken Grotesk';font-size:.72rem;font-weight:700;color:#fff;
+    background:linear-gradient(140deg,var(--brand),var(--brand-2));box-shadow:0 4px 14px -3px rgba(113,32,209,.8),0 0 0 3px rgba(11,10,15,.6)}
+  .mark .lab{font-size:.74rem;font-weight:600;color:var(--ink);white-space:nowrap;
+    background:rgba(14,11,22,.92);border:1px solid rgba(162,85,253,.3);border-radius:8px;padding:5px 10px;
+    box-shadow:0 10px 24px -12px rgba(0,0,0,.8)}
+  .mark.m1{top:20px;left:18px}
+  .mark.m2{top:120px;right:14px;flex-direction:row-reverse}
+  .mark.m3{bottom:26px;left:30px}
+  .scan-score{position:absolute;z-index:5;right:6px;bottom:14px;display:flex;align-items:center;gap:13px;
+    background:linear-gradient(160deg,rgba(28,22,40,.97),rgba(16,13,22,.97));border:1px solid var(--line);
+    border-radius:15px;padding:14px 18px;box-shadow:0 26px 54px -22px rgba(0,0,0,.75);transform:rotate(1.6deg)}
+  .scan-score .ring{position:relative;width:46px;height:46px;flex:none;border-radius:50%;
+    background:conic-gradient(var(--brand-2) 0 62%,rgba(255,255,255,.10) 62% 100%);display:grid;place-items:center}
+  .scan-score .ring::before{content:"";position:absolute;inset:5px;border-radius:50%;background:#15101f}
+  .scan-score .ring b{position:relative;font-family:'Lora';font-size:1rem;font-weight:600;color:var(--ink)}
+  .scan-score .st b{font-family:'Lora';font-size:1.02rem;font-weight:500;display:block;line-height:1.1}
+  .scan-score .st span{font-size:.74rem;color:var(--ink-soft)}
+  @media(prefers-reduced-motion:reduce){.scan-line{animation:none;opacity:.5;transform:translateY(60px)}.diag-tag .dot{animation:none}}
+  @media(max-width:920px){
+    .diag-panel{grid-template-columns:1fr;gap:48px;padding:42px 30px}
+    .scan{max-width:460px;margin:8px auto 0}
+  }
+  @media(max-width:520px){
+    .diag{padding:14px 0 78px}
+    .diag-panel{padding:34px 22px}
+    .diag-feats{grid-template-columns:1fr;gap:14px}
+    .mark .lab{display:none}
+    .scan-score{right:0}
+  }
 
   /* Pricing */
   #pacotes{background:var(--bg-2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
@@ -601,6 +687,7 @@
   <div class="wrap nav-in">
     <a href="#" class="brand-swap" aria-label="UD Labs · Início"><img class="logo-icon" src="logo-icon.svg" alt="" aria-hidden="true" width="409" height="408" decoding="async"><span class="logo-words"><span class="logo-track"><img src="word-udlabs.svg" alt="UD Labs" width="916" height="408" decoding="async"><img src="word-urlandipre.svg" alt="Urlan Dipré" width="1214" height="408" decoding="async"><img src="word-udlabs.svg" alt="" aria-hidden="true" width="916" height="408" decoding="async"></span></span></a>
     <nav class="nav-links">
+      <a href="#diagnostico">Diagnóstico</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#sobre">Sobre</a>
       <a href="#como">Como funciona</a>
@@ -623,11 +710,12 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
   </button>
   <div class="menu-links">
-    <a href="#pacotes"><span class="idx">01</span>Pacotes</a>
-    <a href="#portfolio"><span class="idx">02</span>Portfólio</a>
-    <a href="#sobre"><span class="idx">03</span>Sobre</a>
-    <a href="#como"><span class="idx">04</span>Como funciona</a>
-    <a href="#faq"><span class="idx">05</span>Dúvidas</a>
+    <a href="#diagnostico"><span class="idx">01</span>Diagnóstico</a>
+    <a href="#pacotes"><span class="idx">02</span>Pacotes</a>
+    <a href="#portfolio"><span class="idx">03</span>Portfólio</a>
+    <a href="#sobre"><span class="idx">04</span>Sobre</a>
+    <a href="#como"><span class="idx">05</span>Como funciona</a>
+    <a href="#faq"><span class="idx">06</span>Dúvidas</a>
   </div>
   <div class="menu-foot">
     <a class="btn btn-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">
@@ -695,6 +783,69 @@
       <div class="pain"><div class="x">02</div><b>Site desatualizado</b><p>Lento, sem adaptação pro celular e passando desconfiança antes mesmo de ler o preço.</p></div>
       <div class="pain"><div class="x">03</div><b>Invisível no Google</b><p>Buscam pelo seu serviço e só encontram os concorrentes.</p></div>
       <div class="pain"><div class="x">04</div><b>Refém do Instagram</b><p>Algoritmo muda, alcance despenca. Você não controla nada.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNÓSTICO GRATUITO -->
+<section class="diag" id="diagnostico">
+  <div class="wrap">
+    <div class="diag-panel reveal">
+      <div class="diag-copy">
+        <span class="diag-tag"><span class="dot"></span>Diagnóstico gratuito</span>
+        <h2 class="diag-h">Receba uma análise gratuita do <b>seu site</b></h2>
+        <p class="diag-lede">Eu analiso seu site e aponto oportunidades de melhoria em experiência, credibilidade, conversão e geração de contatos. Você recebe um <b>vídeo curto e direto ao ponto</b>, antes de contratar qualquer serviço.</p>
+
+        <div class="diag-feats">
+          <div class="diag-feat">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><circle cx="12" cy="12" r="2.4"/></svg></span>
+            <span>Pontos de melhoria identificados</span>
+          </div>
+          <div class="diag-feat">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <span>Análise da experiência do usuário</span>
+          </div>
+          <div class="diag-feat">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7 3v5.5c0 4.5-3 7.7-7 8.9-4-1.2-7-4.4-7-8.9V5.5l7-3z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <span>Avaliação de credibilidade</span>
+          </div>
+          <div class="diag-feat">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1h6c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg></span>
+            <span>Sugestões práticas e aplicáveis</span>
+          </div>
+        </div>
+
+        <div class="diag-cta-row">
+          <a class="btn btn-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20solicitar%20o%20diagn%C3%B3stico%20gratuito%20do%20meu%20site.%20O%20endere%C3%A7o%20%C3%A9%3A%20" target="_blank" rel="noopener">
+            <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+            Solicitar diagnóstico gratuito
+          </a>
+          <span class="diag-trust">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Sem custo, sem compromisso
+          </span>
+        </div>
+      </div>
+
+      <div class="scan" aria-hidden="true">
+        <div class="scan-win">
+          <div class="scan-bar"><i></i><i></i><i></i><div class="scan-url">seusite.com.br</div></div>
+          <div class="scan-body">
+            <div class="sh"></div>
+            <div class="sl w1"></div><div class="sl w2"></div>
+            <div class="sbtn"></div>
+            <div class="stiles"><div></div><div></div><div></div></div>
+            <div class="scan-line"></div>
+          </div>
+        </div>
+        <div class="mark m1"><span class="pin">1</span><span class="lab">Primeira dobra sem chamada</span></div>
+        <div class="mark m2"><span class="pin">2</span><span class="lab">Falta prova social</span></div>
+        <div class="mark m3"><span class="pin">3</span><span class="lab">Lento no celular</span></div>
+        <div class="scan-score">
+          <div class="ring"><b>62</b></div>
+          <div class="st"><b>3 oportunidades</b><span>encontradas na análise</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
