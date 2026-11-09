@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NE6Z6B18ZW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NE6Z6B18ZW');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sites para profissionais de saúde | UD Labs</title>
+<meta name="description" content="Sites sofisticados, rápidos e otimizados para o Google, feitos para profissionais de saúde. Veja alguns que já estão no ar.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://udlabs.com.br/saude">
+<meta name="theme-color" content="#0B0A0F">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="UD Labs">
+<meta property="og:title" content="Sites para profissionais de saúde | UD Labs">
+<meta property="og:description" content="Veja alguns sites que já estão no ar e como ficaria o seu.">
+<meta property="og:url" content="https://udlabs.com.br/saude">
+<meta property="og:image" content="https://udlabs.com.br/saude/og-saude.png?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Três sites de profissionais de saúde criados pela UD Labs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sites para profissionais de saúde | UD Labs">
+<meta name="twitter:description" content="Veja alguns sites que já estão no ar e como ficaria o seu.">
+<meta name="twitter:image" content="https://udlabs.com.br/saude/og-saude.png?v=1">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* Tokens copiados da home (index.html) — se mudarem lá, mudam aqui. */
+  :root{
+    --bg:#0B0A0F;
+    --bg-2:#110E18;
+    --panel:rgba(255,255,255,.025);
+    --ink:#F1EEF6;
+    --ink-soft:#948FA3;
+    --line:rgba(241,238,246,.10);
+    --line-soft:rgba(241,238,246,.06);
+    --brand:#7120D1;
+    --brand-2:#A255FD;
+    --brand-glow:rgba(162,85,253,.34);
+    --radius:16px;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{overflow-x:clip}
+  body{
+    font-family:'Hanken Grotesk',system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:clip;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;
+    background:radial-gradient(70rem 32rem at 50% -10%,rgba(113,32,209,.32),transparent 70%);
+  }
+  h1,h2,h3{font-family:'Lora',Georgia,serif;font-weight:400;line-height:1.06;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative}
+  :focus-visible{outline:2px solid var(--brand-2);outline-offset:3px}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:11px;font-weight:600;font-size:.76rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--brand-2)}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--brand-2);opacity:.6}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 28px;
+    border-radius:999px;font-weight:600;font-size:1rem;transition:transform .2s ease,box-shadow .2s ease}
+  .btn-cta{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
+    box-shadow:0 16px 44px -16px var(--brand-glow),inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn-cta:hover{transform:translateY(-2px);box-shadow:0 22px 54px -14px var(--brand-glow),inset 0 1px 0 rgba(255,255,255,.18)}
+  .wa-ico{width:20px;height:20px}
+
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .nav-brand{display:inline-flex;align-items:center}
+  .nav-brand img{height:30px;width:auto;display:block}
+  .nav .btn{min-height:44px;padding:0 22px;font-size:.92rem}
+
+  .hero{padding:clamp(48px,9vh,96px) 0 clamp(40px,6vh,64px)}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:300;max-width:19ch;margin:20px 0 20px}
+  .hero h1 b{font-weight:600}
+  .hero p.sub{color:var(--ink-soft);font-size:1.15rem;max-width:46ch}
+  .checks{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:28px;list-style:none;font-size:.98rem}
+  .checks li::before{content:"✓";color:var(--brand-2);margin-right:8px}
+
+  .port{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .port-item{display:block;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line-soft);background:var(--panel);
+    transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s}
+  .port-item:hover,.port-item:focus-visible{transform:translateY(-5px);border-color:var(--brand-2)}
+  .port-thumb{display:block;width:100%;height:auto;aspect-ratio:572/325;object-fit:cover;object-position:top center}
+  .port-meta{padding:17px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .port-meta b{font-family:'Lora',Georgia,serif;font-size:1.08rem;font-weight:500;transition:color .2s}
+  .port-item:hover .port-meta b{color:var(--brand-2)}
+  .visit{color:var(--brand-2);font-weight:600;white-space:nowrap}
+  @media(max-width:880px){.port{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.port{grid-template-columns:1fr}}
+
+  .final{padding:clamp(64px,10vh,110px) 0;text-align:center}
+  .final h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:300;max-width:20ch;margin:18px auto 14px}
+  .final h2 b{font-weight:600}
+  .final p{color:var(--ink-soft);font-size:1.1rem;max-width:46ch;margin:0 auto 30px}
+  .final .eyebrow{justify-content:center}
+  @media(max-width:560px){.final .btn{width:100%}}
+
+  footer{padding:36px 0 44px;border-top:1px solid var(--line-soft);color:var(--ink-soft);font-size:.88rem}
+  .foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px 24px}
+  footer a:hover{color:var(--ink)}
+
+  @media(prefers-reduced-motion:no-preference){
+    .hero .wrap>*,.port-item{opacity:0;transform:translateY(18px);animation:subir .7s cubic-bezier(.2,.7,.2,1) forwards}
+    .hero .wrap>:nth-child(2){animation-delay:.08s}.hero .wrap>:nth-child(3){animation-delay:.16s}.hero .wrap>:nth-child(4){animation-delay:.24s}
+    .port-item:nth-child(1){animation-delay:.3s}.port-item:nth-child(2){animation-delay:.38s}.port-item:nth-child(3){animation-delay:.46s}
+    @keyframes subir{to{opacity:1;transform:none}}
+  }
+  @media(max-width:560px){.wrap{padding:0 20px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="nav-brand" href="/" aria-label="UD Labs · Início"><img src="/logo-udlabs.svg" alt="UD Labs" width="1325" height="408"></a>
+    <a class="btn btn-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Vi%20sua%20mensagem%20e%20quero%20ver%20como%20ficaria%20o%20meu%20site." target="_blank" rel="noopener" data-wa="topo">
+      <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Para profissionais de saúde</span>
+      <h1>Sites para <b>profissionais de saúde</b>.</h1>
+      <p class="sub">Design sofisticado, rápido no celular e otimizado para o Google. Veja alguns que já estão no ar.</p>
+      <ul class="checks">
+        <li>Resposta no mesmo dia</li>
+        <li>Design exclusivo</li>
+        <li>Sem mensalidade</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-label="Sites que já estão no ar">
+    <div class="wrap">
+      <div class="port">
+        <a class="port-item" href="https://www.drdoglasgobbi.com.br/" target="_blank" rel="noopener">
+          <img class="port-thumb" src="/saude/doglas.webp" alt="Site do Dr. Doglas Gobbi, cirurgião especialista" width="572" height="325" decoding="async">
+          <span class="port-meta"><b>Dr. Doglas Gobbi</b><span class="visit">Visitar ↗</span></span>
+        </a>
+        <a class="port-item" href="https://www.drabeatrizmartins.com.br/" target="_blank" rel="noopener">
+          <img class="port-thumb" src="/saude/beatriz.webp" alt="Site da Dra. Beatriz Martins, pneumologista" width="572" height="325" decoding="async">
+          <span class="port-meta"><b>Dra. Beatriz Martins</b><span class="visit">Visitar ↗</span></span>
+        </a>
+        <a class="port-item" href="https://www.dralarissaodonto.com.br/" target="_blank" rel="noopener">
+          <img class="port-thumb" src="/saude/larissa.webp" alt="Site da Dra. Larissa, odontologia" width="572" height="325" decoding="async">
+          <span class="port-meta"><b>Dra. Larissa · Odontologia</b><span class="visit">Visitar ↗</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <span class="eyebrow">Próximo passo</span>
+      <h2>Quer ver como ficaria <b>o seu</b>?</h2>
+      <p>Me chame no WhatsApp e eu te mostro, com os seus dados.</p>
+      <a class="btn btn-cta" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Vi%20sua%20mensagem%20e%20quero%20ver%20como%20ficaria%20o%20meu%20site." target="_blank" rel="noopener" data-wa="final">
+        <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <p>© 2026 UD Labs · Sites e soluções digitais</p>
+    <p><a href="/">udlabs.com.br</a> · <a href="/privacidade.html">Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+  // Conta o clique no WhatsApp no GA4, separando topo e final da página.
+  document.querySelectorAll('[data-wa]').forEach(function(a){
+    a.addEventListener('click', function(){
+      gtag('event', 'whatsapp_click', {page: 'saude', posicao: a.dataset.wa});
+    });
+  });
+</script>
+</body>
+</html>
