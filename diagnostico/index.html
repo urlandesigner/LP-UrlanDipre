@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<base href="../">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NE6Z6B18ZW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NE6Z6B18ZW');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico de Site Gratuito | UD Labs</title>
+<meta name="description" content="Receba um diagnóstico prático do seu site antes de investir em redesign. A UD Labs analisa conversão, credibilidade, mobile e clareza da sua página.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0B0A0F">
+<link rel="canonical" href="https://udlabs.com.br/diagnostico/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="UD Labs">
+<meta property="og:title" content="Diagnóstico de Site Gratuito | UD Labs">
+<meta property="og:description" content="Receba uma análise prática do seu site com pontos de conversão, credibilidade e experiência antes de investir em redesign.">
+<meta property="og:url" content="https://udlabs.com.br/diagnostico/">
+<meta property="og:image" content="https://udlabs.com.br/og-image.png?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UD Labs, diagnóstico de site gratuito">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diagnóstico de Site Gratuito | UD Labs">
+<meta name="twitter:description" content="Receba um diagnóstico prático do seu site antes de investir em redesign.">
+<meta name="twitter:image" content="https://udlabs.com.br/og-image.png?v=2">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0A0F;
+    --bg-2:#110E18;
+    --panel:rgba(255,255,255,.025);
+    --panel-2:rgba(255,255,255,.045);
+    --ink:#F1EEF6;
+    --ink-soft:#948FA3;
+    --line:rgba(241,238,246,.10);
+    --line-soft:rgba(241,238,246,.06);
+    --brand:#7120D1;
+    --brand-2:#A255FD;
+    --brand-3:#C793FF;
+    --brand-glow:rgba(162,85,253,.34);
+    --wa:#25D366;
+    --ok:#8DFFB7;
+    --warn:#FFC56E;
+    --radius:18px;
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{
+    font-family:'Hanken Grotesk',system-ui,sans-serif;
+    background:
+      radial-gradient(circle at 18% 10%, rgba(162,85,253,.18), transparent 28%),
+      radial-gradient(circle at 86% 14%, rgba(113,32,209,.16), transparent 22%),
+      linear-gradient(180deg,#0B0A0F 0%,#120E1A 40%,#0B0A0F 100%);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:clip;
+    position:relative;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+      linear-gradient(rgba(162,85,253,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(162,85,253,.05) 1px, transparent 1px);
+    background-size:42px 42px;
+    mask-image:radial-gradient(circle at center, #000 28%, transparent 90%);
+    opacity:.22;
+  }
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,.serif{font-family:'Lora',Georgia,serif;font-weight:400;line-height:1.03;letter-spacing:-.02em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+  .accent{color:var(--brand-2)}
+  .accent-i{font-style:italic;color:var(--brand-2)}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:11px;
+    font-size:.76rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--brand-3);
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.7}
+
+  header.top{position:sticky;top:0;z-index:30;background:rgba(11,10,15,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+  .top-in{height:76px;display:flex;align-items:center;justify-content:space-between}
+  .brand-logo{display:block;width:auto;height:34px}
+  .top-back{
+    display:inline-flex;align-items:center;gap:8px;
+    color:var(--ink-soft);font-size:.9rem;font-weight:500;
+    transition:color .2s ease, transform .2s ease;
+  }
+  .top-back:hover{color:var(--ink);transform:translateX(-2px)}
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    min-height:54px;padding:15px 28px;border:none;border-radius:999px;cursor:pointer;
+    font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:1rem;font-weight:700;
+    transition:transform .18s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, opacity .2s ease;
+  }
+  .btn-cta{
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    color:#fff;
+    box-shadow:0 14px 42px -14px var(--brand-glow), inset 0 1px 0 rgba(255,255,255,.18);
+  }
+  .btn-cta:hover{transform:translateY(-2px);box-shadow:0 22px 54px -14px var(--brand-glow), inset 0 1px 0 rgba(255,255,255,.18)}
+  .btn-ghost{
+    background:transparent;color:var(--ink);border:1px solid var(--line);
+  }
+  .btn-ghost:hover{border-color:var(--brand-2);background:var(--panel-2)}
+  .btn .arr{transition:transform .2s ease}
+  .btn:hover .arr{transform:translateX(3px)}
+  .wa-ico{width:20px;height:20px;flex:none}
+
+  main{padding:38px 0 100px;position:relative;z-index:2}
+  section.block{padding:88px 0}
+  .sec-head{display:flex;flex-direction:column;gap:18px;margin-bottom:44px}
+  .sec-head h2{font-size:clamp(2.1rem,4.2vw,3.15rem);max-width:18ch;text-wrap:pretty}
+  .sec-head p{max-width:58ch;color:var(--ink-soft);font-size:1.08rem;line-height:1.72}
+
+  .hero{padding:28px 0 72px}
+  .hero-layout{display:flex;flex-direction:column;gap:28px}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);gap:38px;align-items:start}
+  .hero-copy{padding-top:14px}
+  .hero-copy h1{font-size:clamp(2.65rem,4.1vw,4.3rem);margin:22px 0 20px;max-width:14.4ch;line-height:.91;text-wrap:balance}
+  .hero-copy .lede{max-width:60ch;color:var(--ink-soft);font-size:1.03rem;line-height:1.74;margin-bottom:28px}
+  .hero-points{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+  .hero-points span{
+    display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border-radius:999px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line-soft);font-size:.9rem;color:var(--ink-soft)
+  }
+  .hero-points b{color:var(--brand-3);font-weight:700}
+  .hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:2px}
+  .hero-cta .btn{min-width:236px}
+
+  .hero-capture{
+    display:grid;grid-template-columns:minmax(300px,.96fr) minmax(0,1.04fr);gap:24px;align-items:start;
+    padding:26px;border-radius:30px;border:1px solid rgba(162,85,253,.18);
+    background:linear-gradient(160deg,rgba(31,22,47,.84),rgba(14,11,21,.94));
+    box-shadow:0 40px 120px -70px rgba(0,0,0,.95), inset 0 1px 0 rgba(255,255,255,.05)
+  }
+  .capture-copy{
+    padding:8px 6px 8px 2px;display:flex;flex-direction:column;align-items:flex-start;
+    gap:20px;min-height:100%
+  }
+  .capture-copy .badge{align-self:flex-start}
+  .capture-intro{display:flex;flex-direction:column;gap:14px;max-width:35ch}
+  .capture-copy h2{font-size:clamp(1.8rem,2.6vw,2.35rem);max-width:13ch;margin:0;line-height:.98;text-wrap:pretty}
+  .capture-copy p{max-width:34ch;color:var(--ink-soft);font-size:1rem;line-height:1.65;margin:0}
+  .capture-quick{display:flex;flex-wrap:wrap;gap:10px}
+  .capture-quick span{
+    display:inline-flex;align-items:baseline;gap:.4em;padding:9px 14px;border-radius:12px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line-soft)
+  }
+  .capture-quick b{font-family:'Lora',serif;font-size:1.3rem;font-weight:500;color:var(--brand-3);line-height:1}
+  .capture-quick small{font-size:.82rem;color:var(--ink-soft);line-height:1}
+  .capture-support{
+    grid-column:1 / -1;width:100%;margin-top:6px;padding:20px 22px;border-radius:24px;border:1px solid var(--line-soft);
+    background:linear-gradient(165deg,rgba(255,255,255,.03),rgba(255,255,255,.012));
+    display:flex;flex-direction:column;gap:16px
+  }
+  .capture-support-head{
+    display:flex;flex-direction:column;align-items:flex-start;gap:6px
+  }
+  .capture-support-head strong{
+    font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brand-3)
+  }
+  .capture-support-head span{
+    color:var(--ink-soft);font-size:.92rem;line-height:1.5;max-width:32ch
+  }
+  .capture-support-grid{
+    display:grid;gap:0
+  }
+  .capture-support-item{
+    display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:14px 0;
+    border-top:1px solid var(--line-soft)
+  }
+  .capture-support-item:first-child{padding-top:0;border-top:none}
+  .capture-support-item:last-child{padding-bottom:0}
+  .capture-support-item b{
+    min-width:42px;height:26px;padding:0 10px;border-radius:999px;display:grid;place-items:center;
+    background:rgba(162,85,253,.12);border:1px solid rgba(162,85,253,.22);
+    color:var(--brand-3);font-size:.72rem;font-weight:800;letter-spacing:.12em
+  }
+  .capture-support-item strong{
+    display:block;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:3px
+  }
+  .capture-support-item span{
+    display:block;color:var(--ink-soft);font-size:.9rem;line-height:1.48;max-width:28ch
+  }
+  .capture-panel{
+    padding:22px;border-radius:24px;border:1px solid rgba(241,238,246,.08);
+    background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+    box-shadow:0 24px 80px -58px rgba(0,0,0,.92)
+  }
+
+  .site-form{
+    display:flex;flex-direction:column;gap:14px;
+    padding:0;background:none;border:none;border-radius:0;box-shadow:none;
+  }
+  .site-form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field{display:flex;flex-direction:column;gap:8px}
+  .field label{font-size:.82rem;font-weight:700;letter-spacing:.02em;color:var(--ink-soft)}
+  .field input,.field textarea{
+    width:100%;min-height:56px;padding:0 18px;border-radius:14px;
+    font:inherit;font-size:1rem;color:var(--ink);
+    background:rgba(255,255,255,.03);border:1px solid var(--line);
+    transition:border-color .2s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .field textarea{padding:16px 18px;min-height:112px;resize:vertical;line-height:1.6}
+  .field input::placeholder,.field textarea::placeholder{color:#6c667a}
+  .field input:focus,.field textarea:focus{
+    outline:none;border-color:var(--brand-2);background:rgba(255,255,255,.05);
+    box-shadow:0 0 0 4px rgba(162,85,253,.12);
+  }
+  .field.invalid input,.field.invalid textarea{border-color:rgba(255,120,120,.65)}
+  .field .err{display:none;color:#ff9a9a;font-size:.8rem}
+  .field.invalid .err{display:block}
+  .form-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .form-actions .btn{min-width:220px}
+  .form-secondary{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:12px}
+  .form-secondary .form-tertiary{font-weight:600}
+  .form-tertiary{
+    color:var(--ink-soft);font-size:.9rem;display:inline-flex;align-items:center;gap:8px;
+    transition:color .2s ease
+  }
+  .form-tertiary:hover{color:var(--ink)}
+  .form-tertiary svg{width:16px;height:16px;color:var(--wa);flex:none}
+  .form-note{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;color:var(--ink-soft);font-size:.88rem}
+  .form-note span{display:inline-flex;align-items:center;gap:8px}
+  .form-note svg{width:16px;height:16px;color:var(--brand-2);flex:none}
+  .success-state{
+    display:none;flex-direction:column;gap:16px;
+    padding:22px;border-radius:22px;border:1px solid rgba(141,255,183,.22);
+    background:linear-gradient(165deg,rgba(141,255,183,.08),rgba(255,255,255,.02));
+    box-shadow:0 34px 90px -54px rgba(0,0,0,.92)
+  }
+  .success-state.show{display:flex}
+  .success-badge{
+    display:inline-flex;align-items:center;gap:9px;width:fit-content;padding:8px 14px;border-radius:999px;
+    background:rgba(141,255,183,.08);border:1px solid rgba(141,255,183,.2);color:var(--ok);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase
+  }
+  .success-badge svg{width:16px;height:16px}
+  .success-state h3{font-size:clamp(1.65rem,3.6vw,2.2rem);font-weight:500;max-width:14ch;text-wrap:pretty}
+  .success-state p{color:var(--ink-soft);font-size:1rem;line-height:1.7;max-width:52ch}
+  .success-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .success-actions .btn{min-width:220px}
+  .success-note{font-size:.86rem;color:var(--ink-soft)}
+  .is-hidden{display:none !important}
+
+  .hero-side{
+    position:relative;padding:24px;border-radius:28px;overflow:hidden;
+    background:linear-gradient(160deg,rgba(48,31,81,.82),rgba(18,14,28,.88) 65%);
+    border:1px solid rgba(162,85,253,.22);box-shadow:0 40px 120px -60px rgba(113,32,209,.8);
+  }
+  .hero-side::before{
+    content:"";position:absolute;top:-130px;right:-100px;width:360px;height:360px;border-radius:50%;
+    background:radial-gradient(circle,rgba(162,85,253,.34),transparent 66%);filter:blur(10px)
+  }
+  .hero-side > *{position:relative;z-index:1}
+  .proof-kicker{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  .proof-kicker span{
+    display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;
+    background:rgba(162,85,253,.10);border:1px solid rgba(162,85,253,.24);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-3);font-weight:700
+  }
+  .proof-kicker b{font-size:.86rem;color:var(--ok);font-weight:700}
+  .proof-window{
+    position:relative;border-radius:18px;overflow:hidden;background:linear-gradient(165deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+    border:1px solid var(--line);box-shadow:0 24px 70px -34px rgba(0,0,0,.85)
+  }
+  .proof-bar{height:42px;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid var(--line-soft);background:rgba(0,0,0,.18)}
+  .proof-bar i{width:9px;height:9px;border-radius:50%;background:rgba(241,238,246,.22)}
+  .proof-url{
+    margin-left:14px;max-width:184px;height:22px;flex:1;display:flex;align-items:center;padding:0 12px;
+    border-radius:6px;background:rgba(0,0,0,.28);color:var(--ink-soft);font-size:.68rem;font-weight:700;letter-spacing:.02em
+  }
+  .proof-body{position:relative;padding:24px 22px 28px;min-height:280px}
+  .proof-body .sh{height:14px;width:52%;border-radius:5px;background:var(--ink);opacity:.92;margin-bottom:11px}
+  .proof-body .sl{height:8px;border-radius:5px;background:var(--line);margin-bottom:8px}
+  .proof-body .sl.w1{width:84%}
+  .proof-body .sl.w2{width:69%}
+  .proof-body .cta{margin-top:18px;width:132px;height:34px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));opacity:.75}
+  .proof-body .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+  .proof-body .tiles div{height:56px;border-radius:10px;background:linear-gradient(135deg,rgba(162,85,253,.16),rgba(113,32,209,.06))}
+  .scan-line{
+    position:absolute;left:0;right:0;top:62px;height:92px;
+    background:linear-gradient(to bottom,transparent,rgba(162,85,253,.18) 55%,rgba(162,85,253,.38));
+    border-bottom:1px solid var(--brand-2);box-shadow:0 0 18px 2px rgba(162,85,253,.34);
+    animation:scanMove 3.2s cubic-bezier(.5,0,.5,1) infinite;
+  }
+  @keyframes scanMove{
+    0%{transform:translateY(-98px);opacity:0}
+    12%{opacity:1}
+    88%{opacity:1}
+    100%{transform:translateY(210px);opacity:0}
+  }
+  .callout{
+    position:absolute;display:flex;align-items:center;gap:8px;z-index:3
+  }
+  .callout .pin{
+    width:25px;height:25px;border-radius:50%;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;font-size:.74rem;font-weight:800;
+    box-shadow:0 0 0 3px rgba(11,10,15,.58),0 8px 22px -8px rgba(162,85,253,.85)
+  }
+  .callout .lab{
+    padding:5px 10px;border-radius:8px;background:rgba(14,11,22,.94);border:1px solid rgba(162,85,253,.28);
+    color:var(--ink);font-size:.76rem;font-weight:600;white-space:nowrap
+  }
+  .c1{top:18px;left:16px}
+  .c2{top:118px;right:12px;flex-direction:row-reverse}
+  .c3{bottom:24px;left:24px}
+  .summary-chip{
+    margin-top:18px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;
+    padding:14px 16px;border-radius:16px;background:rgba(11,10,15,.72);border:1px solid var(--line)
+  }
+  .ring{
+    width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+    background:conic-gradient(var(--brand-2) 0 67%,rgba(255,255,255,.10) 67% 100%);
+    position:relative
+  }
+  .ring::before{content:"";position:absolute;inset:6px;border-radius:50%;background:#15101f}
+  .ring b{position:relative;font-family:'Lora',serif;font-size:1.08rem;font-weight:600}
+  .summary-chip strong{display:block;font-family:'Lora',serif;font-size:1.18rem;font-weight:500}
+  .summary-chip span{display:block;color:var(--ink-soft);font-size:.88rem}
+
+  .receive-grid,.fit-grid,.steps-grid,.faq-grid{display:grid;gap:18px}
+  .receive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fit-grid{grid-template-columns:repeat(3,1fr)}
+  .steps-grid{grid-template-columns:repeat(3,1fr)}
+  .card{
+    padding:26px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+    box-shadow:0 24px 70px -50px rgba(0,0,0,.85);
+    transition:transform .22s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease
+  }
+  .card:hover,.faq-item:hover,.mini:hover,.example:hover{transform:translateY(-3px);border-color:rgba(162,85,253,.24);background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.022))}
+  .card .ic{
+    width:44px;height:44px;display:grid;place-items:center;border-radius:14px;
+    margin-bottom:18px;background:linear-gradient(150deg,rgba(162,85,253,.18),rgba(113,32,209,.08));
+    border:1px solid rgba(162,85,253,.22);color:var(--brand-3)
+  }
+  .card .ic svg{width:20px;height:20px}
+  .card h3{font-size:1.38rem;font-weight:500;margin-bottom:8px}
+  .card p{color:var(--ink-soft);font-size:.98rem;line-height:1.68}
+  .card ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .card li{display:flex;gap:10px;color:var(--ink-soft);font-size:.95rem;line-height:1.55}
+  .card li svg{width:16px;height:16px;color:var(--brand-2);flex:none;margin-top:3px}
+
+  .fit-card{position:relative;overflow:hidden}
+  .fit-card::before{
+    content:"";position:absolute;inset:auto -40px -60px auto;width:180px;height:180px;border-radius:50%;
+    background:radial-gradient(circle,rgba(162,85,253,.10),transparent 70%)
+  }
+  .fit-tag{
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;padding:7px 12px;border-radius:999px;
+    background:rgba(255,255,255,.03);border:1px solid var(--line-soft);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-3)
+  }
+
+  .step-card .num{
+    display:inline-flex;align-items:baseline;gap:2px;margin-bottom:18px;font-family:'Lora',serif;font-size:3rem;line-height:1;color:var(--brand-2)
+  }
+  .step-card .num em{font-style:italic}
+
+  .proof-panel{
+    display:grid;grid-template-columns:1.04fr .96fr;gap:22px;padding:28px;border-radius:28px;
+    border:1px solid rgba(162,85,253,.18);background:linear-gradient(155deg,rgba(49,31,83,.55),rgba(17,13,24,.78));
+    box-shadow:0 36px 100px -62px rgba(113,32,209,.78)
+  }
+  .proof-copy p{color:var(--ink-soft);font-size:1rem;line-height:1.72;margin-bottom:18px}
+  .proof-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+  .mini{
+    padding:16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid var(--line-soft)
+  }
+  .mini b{display:block;font-family:'Lora',serif;font-size:1.45rem;font-weight:500;color:var(--ink)}
+  .mini span{display:block;color:var(--ink-soft);font-size:.82rem;line-height:1.4;margin-top:5px}
+  .example{
+    padding:22px;border-radius:22px;background:rgba(10,9,15,.56);border:1px solid var(--line)
+  }
+  .example-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px}
+  .example-head b{font-size:1.05rem}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;
+    background:rgba(162,85,253,.12);border:1px solid rgba(162,85,253,.24);font-size:.76rem;color:var(--brand-3);font-weight:700;text-transform:uppercase;letter-spacing:.08em
+  }
+  .example-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .example-list li{
+    padding:14px 14px 14px 16px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--line-soft)
+  }
+  .example-list strong{display:block;font-size:1rem;margin-bottom:3px}
+  .example-list span{display:block;color:var(--ink-soft);font-size:.92rem;line-height:1.55}
+
+  .faq-grid{grid-template-columns:1fr 1fr}
+  .faq-item{
+    padding:22px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(165deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+    transition:transform .22s ease, border-color .22s ease, background .22s ease
+  }
+  .faq-item h3{font-size:1.18rem;font-weight:500;margin-bottom:10px}
+  .faq-item p{color:var(--ink-soft);font-size:.96rem;line-height:1.7}
+
+  .final{
+    position:relative;overflow:hidden;padding:42px;border-radius:30px;
+    background:linear-gradient(160deg,rgba(46,28,78,.74),rgba(17,13,24,.88) 70%);
+    border:1px solid rgba(162,85,253,.20);box-shadow:0 40px 120px -58px rgba(113,32,209,.84)
+  }
+  .final::before{
+    content:"";position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:520px;height:360px;border-radius:50%;
+    background:radial-gradient(ellipse,var(--brand-glow),transparent 64%);filter:blur(20px)
+  }
+  .final > *{position:relative;z-index:1}
+  .final h2{font-size:clamp(2.2rem,5.4vw,3.8rem);max-width:16ch;margin:22px 0 18px;text-wrap:pretty}
+  .proof-copy h2{font-size:clamp(1.9rem,4vw,2.9rem);margin:20px 0 16px;max-width:16ch;text-wrap:pretty}
+  .final p{max-width:52ch;color:var(--ink-soft);font-size:1.08rem;line-height:1.72}
+  .final-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+  .final-note{margin-top:16px;color:var(--ink-soft);font-size:.88rem}
+  .final-note a{color:var(--ink);font-weight:600}
+  .final-note a:hover{color:var(--brand-2)}
+
+  .wa-float{
+    position:fixed;right:22px;bottom:22px;z-index:25;width:60px;height:60px;border-radius:50%;
+    display:grid;place-items:center;background:var(--wa);color:#06231A;
+    box-shadow:0 14px 36px -8px rgba(37,211,102,.5),0 0 0 1px rgba(37,211,102,.4);
+    transition:transform .2s ease
+  }
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:32px;height:32px}
+
+  footer.foot{padding:26px 24px 102px;text-align:center;color:var(--ink-soft);font-size:.8rem;position:relative;z-index:2}
+
+  .reveal{opacity:0;transform:translateY(22px);filter:blur(6px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1),filter .75s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none;filter:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+  @media(max-width:980px){
+    .hero-grid,.hero-capture,.proof-panel{grid-template-columns:1fr}
+    .receive-grid{grid-template-columns:1fr 1fr}
+    .fit-grid,.steps-grid,.faq-grid{grid-template-columns:1fr}
+    .hero-copy{padding-top:0}
+    .hero-copy h1{max-width:13ch}
+    .hero-side{max-width:560px}
+    .capture-copy{padding:0}
+    .proof-panel{padding:24px}
+  }
+  @media(max-width:680px){
+    .wrap{padding:0 20px}
+    .top-in{height:72px}
+    .hero{padding:22px 0 52px}
+    .hero-layout{gap:22px}
+    .hero-copy h1{font-size:clamp(2.25rem,11vw,3.5rem);max-width:11.4ch}
+    .hero-copy .lede{font-size:1.02rem}
+    .hero-capture{padding:18px}
+    .capture-copy{min-height:auto}
+    .capture-copy h2{max-width:100%}
+    .capture-support{margin-top:2px;padding:18px}
+    .capture-panel{padding:18px}
+    .hero-points{gap:10px}
+    .hero-points span{font-size:.84rem}
+    section.block{padding:64px 0}
+    .site-form{padding:16px}
+    .site-form .row{grid-template-columns:1fr}
+    .form-actions,.success-actions{flex-direction:column}
+    .form-actions .btn,.success-actions .btn{width:100%;min-width:0}
+    .receive-grid{grid-template-columns:1fr}
+    .proof-kicker{flex-direction:column;align-items:flex-start}
+    .callout .lab{display:none}
+    .proof-stats{grid-template-columns:1fr}
+    .final{padding:32px 22px;border-radius:24px}
+    .final-actions{flex-direction:column}
+    .final-actions .btn{width:100%}
+    .sec-head h2,.proof-copy h2,.final h2{max-width:100%}
+    .wa-float{width:56px;height:56px;right:18px;bottom:18px}
+    .wa-float svg{width:30px;height:30px}
+    footer.foot{padding-bottom:94px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important}
+    .reveal{filter:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a href="index.html" aria-label="UD Labs - página inicial"><img class="brand-logo" src="logo-udlabs.svg" alt="UD Labs" width="1325" height="408" decoding="async"></a>
+    <a href="index.html" class="top-back" aria-label="Voltar para o site">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3L5 7l4 4"/></svg>
+      Voltar ao site
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-layout">
+      <div class="hero-grid">
+        <div class="hero-copy">
+        <span class="eyebrow reveal">Diagnóstico de Site</span>
+        <h1 class="reveal d1">Descubra o que trava seu site <span class="accent">antes de investir</span> em redesign.</h1>
+        <p class="lede reveal d2">Você recebe uma leitura prática dos principais gargalos de clareza, credibilidade, experiência no celular e conversão. A ideia é te dar prioridades e próximos passos objetivos, sem compromisso e sem você precisar decidir no escuro.</p>
+
+        <div class="hero-points">
+          <span><b>01</b> Sem custo</span>
+          <span><b>02</b> Retorno em até 24h úteis</span>
+          <span><b>03</b> Vídeo curto e checklist visual</span>
+        </div>
+
+        <div class="hero-cta reveal d2">
+          <a class="btn btn-cta" href="#solicitar" data-track-event="select_diagnostico" data-track-source-section="hero_copy" data-track-destination="form">
+            Solicitar diagnóstico
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-side reveal d2" aria-label="Exemplo de análise">
+        <div class="proof-kicker">
+          <span>Exemplo da análise</span>
+          <b>Entrega em vídeo + checklist</b>
+        </div>
+        <div class="proof-window">
+          <div class="proof-bar"><i></i><i></i><i></i><div class="proof-url">seusite.com.br</div></div>
+          <div class="proof-body">
+            <div class="sh"></div>
+            <div class="sl w1"></div>
+            <div class="sl w2"></div>
+            <div class="cta"></div>
+            <div class="tiles"><div></div><div></div><div></div></div>
+            <div class="scan-line"></div>
+            <div class="callout c1"><span class="pin">1</span><span class="lab">Primeira dobra sem proposta clara</span></div>
+            <div class="callout c2"><span class="pin">2</span><span class="lab">Prova social escondida</span></div>
+            <div class="callout c3"><span class="pin">3</span><span class="lab">CTA fraco no celular</span></div>
+          </div>
+        </div>
+        <div class="summary-chip">
+          <div class="ring"><b>67</b></div>
+          <div>
+            <strong>3 prioridades imediatas</strong>
+            <span>clareza da oferta, confiança e caminho até o contato</span>
+          </div>
+        </div>
+      </aside>
+      </div>
+
+      <div class="hero-capture reveal d3">
+        <div class="capture-copy">
+          <span class="badge">Entrada rápida</span>
+          <div class="capture-intro">
+            <h2>Peça o diagnóstico em 1 minuto.</h2>
+            <p>Preencha só o essencial. Eu analiso o site e devolvo uma leitura curta, prática e com prioridades claras.</p>
+          </div>
+          <div class="capture-quick">
+            <span><b>5</b><small>campos</small></span>
+            <span><b>24h</b><small>retorno útil</small></span>
+            <span><b>100%</b><small>online</small></span>
+          </div>
+        </div>
+
+        <div class="capture-panel">
+          <form class="site-form" id="solicitar" novalidate>
+            <div class="row">
+              <div class="field" id="nomeField">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome">
+                <span class="err">Informe seu nome.</span>
+              </div>
+              <div class="field" id="whatsappField">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(27) 99999-9999">
+                <span class="err">Informe um WhatsApp válido.</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field" id="emailField">
+                <label for="email">E-mail <span style="opacity:.7;font-weight:500">(opcional)</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com">
+                <span class="err">Informe um e-mail válido.</span>
+              </div>
+              <div class="field" id="siteField">
+                <label for="siteUrl">URL do seu site</label>
+                <input type="text" id="siteUrl" name="siteUrl" placeholder="www.seusite.com.br">
+                <span class="err">Informe a URL do seu site.</span>
+              </div>
+            </div>
+            <div class="field" id="objetivoField">
+              <label for="objetivo">Principal objetivo</label>
+              <textarea id="objetivo" name="objetivo" placeholder="Ex.: Quero gerar mais contatos pelo site."></textarea>
+              <span class="err">Conte em uma frase qual é o principal objetivo ou problema.</span>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-cta" id="diagnostico-submit">
+                Solicitar diagnóstico
+                <span class="arr" aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div class="form-secondary">
+              <a class="form-tertiary" href="briefing/" data-track-event="select_briefing" data-track-source-section="hero_form" data-track-destination="briefing">
+                ou prefiro preencher o briefing
+              </a>
+              <a class="form-tertiary" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20falar%20agora%20sobre%20o%20diagn%C3%B3stico%20do%20meu%20site." target="_blank" rel="noopener" data-track-event="select_whatsapp" data-track-source-section="hero_form" data-track-destination="whatsapp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+                Prefere falar agora? WhatsApp
+              </a>
+            </div>
+          </form>
+
+          <div class="success-state" id="successState" aria-live="polite">
+            <span class="success-badge">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.1 3.1L13 4.8"/></svg>
+              Solicitação enviada
+            </span>
+            <h3>Recebi o seu site. Agora eu sigo com a análise e retorno em até 24h úteis.</h3>
+            <p>Se você quiser, pode já completar o briefing para me dar mais contexto sobre o negócio e acelerar uma eventual proposta. Se preferir, também dá para falar comigo no WhatsApp agora.</p>
+            <div class="success-actions">
+              <a class="btn btn-cta" href="briefing/" data-track-event="select_briefing" data-track-source-section="success_state" data-track-destination="briefing">
+                Completar briefing
+                <span class="arr" aria-hidden="true">→</span>
+              </a>
+              <a class="btn btn-ghost" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Acabei%20de%20pedir%20o%20diagn%C3%B3stico%20do%20meu%20site%20e%20queria%20te%20passar%20mais%20contexto." target="_blank" rel="noopener" data-track-event="select_whatsapp" data-track-source-section="success_state" data-track-destination="whatsapp">
+                <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+                Falar no WhatsApp agora
+              </a>
+            </div>
+            <div class="success-note">Se o diagnóstico apontar um problema maior de estrutura, o briefing ajuda a transformar a análise em escopo e proposta mais rápido.</div>
+          </div>
+
+          <div class="form-note" id="formNote">
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8.5l3.2 3.2L13 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sem compromisso</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="8" r="6.5"/><path d="M8 4.5V8l2.4 1.4" stroke-linecap="round"/></svg>Retorno em até 24h úteis</span>
+          </div>
+        </div>
+
+        <div class="capture-support">
+          <div class="capture-support-head">
+            <strong>Depois do envio</strong>
+            <span>Você não entra num funil confuso. Recebe uma leitura objetiva para saber o que corrigir primeiro.</span>
+          </div>
+          <div class="capture-support-grid">
+            <div class="capture-support-item">
+              <b>01</b>
+              <div>
+                <strong>Leio os gargalos principais</strong>
+                <span>Oferta, confiança, mobile e caminho até o contato.</span>
+              </div>
+            </div>
+            <div class="capture-support-item">
+              <b>02</b>
+              <div>
+                <strong>Organizo o que tem prioridade</strong>
+                <span>Sem relatório genérico nem excesso de teoria.</span>
+              </div>
+            </div>
+            <div class="capture-support-item">
+              <b>03</b>
+              <div>
+                <strong>Você decide o próximo passo</strong>
+                <span>Corrigir, avançar para briefing ou falar comigo.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">O que você recebe</span>
+        <h2>Uma leitura rápida, prática e orientada a <span class="accent-i">decisão</span>.</h2>
+        <p>O objetivo não é fazer um relatório genérico. É apontar o que hoje está atrapalhando seu site de transmitir confiança e gerar contato.</p>
+      </div>
+
+      <div class="receive-grid">
+        <article class="card reveal d1">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h7"/><path d="M17 12l2 2 4-4"/></svg></div>
+          <h3>Checklist visual</h3>
+          <p>Os pontos que mais pesam na percepção do usuário logo nos primeiros segundos da visita.</p>
+        </article>
+
+        <article class="card reveal d1">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M12 3v18"/><path d="M6 6h4v4H6z"/><path d="M14 14h4v4h-4z"/></svg></div>
+          <h3>Pontos de conversão</h3>
+          <p>Onde a página está perdendo contato, desperdiçando atenção ou deixando a próxima ação confusa.</p>
+        </article>
+
+        <article class="card reveal d2">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l7 3v5.5c0 4.5-3 7.7-7 8.9-4-1.2-7-4.4-7-8.9V5.5l7-3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Credibilidade</h3>
+          <p>Elementos que aumentam ou derrubam confiança: prova social, autoridade, consistência e clareza da oferta.</p>
+        </article>
+
+        <article class="card reveal d2">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10 18.5h4"/></svg></div>
+          <h3>Mobile e velocidade percebida</h3>
+          <p>Se o site no celular passa fluidez, clareza e segurança ou se já começa criando atrito antes do clique.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Para quem é</span>
+        <h2>Mais útil para quem sente que o site existe, mas <span class="accent">não ajuda</span>.</h2>
+        <p>Essa análise faz sentido principalmente quando o problema não é apenas “ter um site”, mas entender por que ele não está cumprindo bem o papel comercial dele.</p>
+      </div>
+
+      <div class="fit-grid">
+        <article class="card fit-card reveal d1">
+          <span class="fit-tag">Perfil 01</span>
+          <h3>Site antigo</h3>
+          <p>Negócios com uma página desatualizada, sem clareza de oferta, com visual fraco no celular ou sensação de abandono.</p>
+        </article>
+
+        <article class="card fit-card reveal d2">
+          <span class="fit-tag">Perfil 02</span>
+          <h3>Site sem resultado</h3>
+          <p>Empresas que recebem visitas, mas quase não transformam esse tráfego em contato, orçamento ou confiança.</p>
+        </article>
+
+        <article class="card fit-card reveal d3">
+          <span class="fit-tag">Perfil 03</span>
+          <h3>Refém do Instagram</h3>
+          <p>Negócios que dependem demais da rede social e precisam de um ponto próprio para apresentar serviço, autoridade e caminho até o lead.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Você envia a URL, eu devolvo a leitura e você decide o <span class="accent-i">próximo passo</span>.</h2>
+        <p>Sem reunião longa e sem pressão comercial. A análise existe para te dar mais clareza antes de qualquer investimento.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="card step-card reveal d1">
+          <div class="num">0<em>1</em></div>
+          <h3>Você envia o site</h3>
+          <p>Manda a URL e, se quiser, me conta rapidamente qual é a maior dúvida ou problema percebido hoje.</p>
+        </article>
+
+        <article class="card step-card reveal d2">
+          <div class="num">0<em>2</em></div>
+          <h3>Eu faço a análise</h3>
+          <p>Reviso oferta, navegação, credibilidade, mobile, conversão e os sinais que influenciam a decisão do visitante.</p>
+        </article>
+
+        <article class="card step-card reveal d3">
+          <div class="num">0<em>3</em></div>
+          <h3>Você recebe e decide</h3>
+          <p>Com o parecer em mãos, você entende o que vale corrigir primeiro e decide se quer tocar isso sozinho ou comigo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="exemplo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Prova</span>
+        <h2>Um exemplo de como a leitura chega para você.</h2>
+        <p>Mesmo quando o site está bonito, ainda podem existir gargalos de mensagem, confiança e fluxo até o contato. O valor da análise está em revelar isso com objetividade.</p>
+      </div>
+
+      <div class="proof-panel reveal">
+        <div class="proof-copy">
+          <span class="badge">Exemplo simulado</span>
+          <h2>O site parece profissional, mas ainda deixa dinheiro na mesa.</h2>
+          <p>Neste cenário, a página tinha um visual bom e passava seriedade, mas a proposta principal estava difusa e o caminho até o contato aparecia tarde demais. O resultado: visita interessada, mas pouca ação.</p>
+          <p>O diagnóstico devolve exatamente esse tipo de leitura: o que está confuso, o que está fraco e o que deve ser atacado primeiro para aumentar a chance de contato.</p>
+
+          <div class="proof-stats">
+            <div class="mini">
+              <b>3</b>
+              <span>gargalos principais identificados</span>
+            </div>
+            <div class="mini">
+              <b>24h</b>
+              <span>prazo máximo de retorno desta oferta</span>
+            </div>
+            <div class="mini">
+              <b>1</b>
+              <span>próxima ação recomendada por prioridade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <b>Resumo do parecer</b>
+            <span class="badge">Diagnóstico curto</span>
+          </div>
+          <ul class="example-list">
+            <li>
+              <strong>Mensagem principal genérica</strong>
+              <span>O visitante entende que a empresa é séria, mas não entende rápido o diferencial nem para quem a oferta é ideal.</span>
+            </li>
+            <li>
+              <strong>Confiança aparece tarde</strong>
+              <span>Provas e sinais de autoridade existem, porém estão abaixo da dobra e perdem força no momento da decisão.</span>
+            </li>
+            <li>
+              <strong>Contato sem prioridade visual</strong>
+              <span>No celular, o CTA disputa atenção com outros elementos e a transição até o WhatsApp não fica óbvia o suficiente.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Dúvidas rápidas antes de pedir o seu diagnóstico.</h2>
+      </div>
+
+      <div class="faq-grid">
+        <article class="faq-item reveal d1">
+          <h3>Preciso contratar algum serviço depois?</h3>
+          <p>Não. O diagnóstico é uma oferta de entrada para te dar clareza. Depois disso, você decide se quer aplicar sozinho, com sua equipe ou falar comigo sobre a implementação.</p>
+        </article>
+
+        <article class="faq-item reveal d2">
+          <h3>Qual é o prazo de retorno?</h3>
+          <p>A proposta desta página é retorno em até 24 horas úteis, com uma análise curta, objetiva e prática.</p>
+        </article>
+
+        <article class="faq-item reveal d2">
+          <h3>Que tipo de site pode pedir?</h3>
+          <p>Landing pages, sites institucionais, páginas de serviços e negócios locais que já tenham algo publicado e queiram entender melhor onde estão os gargalos.</p>
+        </article>
+
+        <article class="faq-item reveal d3">
+          <h3>O que eu recebo exatamente?</h3>
+          <p>Uma leitura visual com prioridades, principais oportunidades de melhoria e recomendação clara do que vale ajustar primeiro.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:20px">
+    <div class="wrap">
+      <div class="final reveal">
+        <span class="eyebrow">Bora destravar isso</span>
+        <h2>Se o seu site já existe, dá para descobrir hoje o que mais está travando os resultados.</h2>
+        <p>Envie a URL e eu devolvo uma leitura prática em até 24h úteis. Sem compromisso, sem reunião longa e sem você precisar investir às cegas em redesign.</p>
+        <div class="final-actions">
+          <a class="btn btn-cta" href="#solicitar" data-track-event="select_diagnostico" data-track-source-section="final_cta" data-track-destination="form">
+            Enviar meu site agora
+            <span class="arr" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="briefing/" data-track-event="select_briefing" data-track-source-section="final_cta" data-track-destination="briefing">
+            Completar briefing primeiro
+          </a>
+        </div>
+        <div class="final-note">Se você quiser falar comigo antes, o WhatsApp continua disponível como atalho: <a href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20antes%20de%20pedir%20o%20diagn%C3%B3stico%20do%20meu%20site." target="_blank" rel="noopener" data-track-event="select_whatsapp" data-track-source-section="final_cta_note" data-track-destination="whatsapp">tirar uma dúvida agora</a>.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">© 2026 UD Labs · Diagnóstico de site</footer>
+
+<a class="wa-float" href="https://wa.me/5527999938876?text=Ol%C3%A1!%20Quero%20pedir%20o%20diagn%C3%B3stico%20do%20meu%20site." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-track-event="select_whatsapp" data-track-source-section="floating_button" data-track-destination="whatsapp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 8.22 8.24c0 4.54-3.69 8.21-8.23 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42-.14 0-.31-.02-.47-.02a.9.9 0 0 0-.65.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.35.99 2.51.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+</a>
+
+<script>
+  (function(){
+    var ENDPOINT = window.UD_LEAD_ENDPOINT || '';
+    var form = document.getElementById('solicitar');
+    var successState = document.getElementById('successState');
+    var formNote = document.getElementById('formNote');
+    var nomeField = document.getElementById('nomeField');
+    var whatsappField = document.getElementById('whatsappField');
+    var emailField = document.getElementById('emailField');
+    var siteField = document.getElementById('siteField');
+    var objetivoField = document.getElementById('objetivoField');
+    var nomeInput = document.getElementById('nome');
+    var whatsappInput = document.getElementById('whatsapp');
+    var emailInput = document.getElementById('email');
+    var siteInput = document.getElementById('siteUrl');
+    var objetivoInput = document.getElementById('objetivo');
+    var submitBtn = document.getElementById('diagnostico-submit');
+    var revealEls = document.querySelectorAll('.reveal');
+    var defaultSubmitHtml = submitBtn.innerHTML;
+    var hasTrackedFormStart = false;
+
+    function track(eventName, params){
+      try{
+        gtag('event', eventName, params || {});
+      }catch(e){}
+    }
+
+    function saveFallback(payload){
+      try{
+        var key = 'udlabs_diagnostico_leads';
+        var storage = window.localStorage;
+        var list = JSON.parse(storage.getItem(key) || '[]');
+        list.push(payload);
+        storage.setItem(key, JSON.stringify(list));
+      }catch(e){
+        window.__udlabsDiagnosticoLeads = window.__udlabsDiagnosticoLeads || [];
+        window.__udlabsDiagnosticoLeads.push(payload);
+      }
+    }
+
+    function normalizeSiteUrl(value){
+      var trimmed = value.trim();
+      if(!trimmed){
+        return '';
+      }
+      return /^https?:\/\//i.test(trimmed) ? trimmed : 'https://' + trimmed;
+    }
+
+    function isValidEmail(value){
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    }
+
+    function isValidWhatsapp(value){
+      return value.replace(/\D/g, '').length >= 10;
+    }
+
+    function setInvalid(fieldEl, inputEl, isInvalid){
+      if(!fieldEl || !inputEl){
+        return;
+      }
+      fieldEl.classList.toggle('invalid', !!isInvalid);
+      if(isInvalid){
+        inputEl.setAttribute('aria-invalid', 'true');
+      }else{
+        inputEl.removeAttribute('aria-invalid');
+      }
+    }
+
+    function collectPayload(){
+      return {
+        dataHora: new Date().toISOString(),
+        status: 'Novo Diagnóstico',
+        nome: nomeInput.value.trim(),
+        email: emailInput.value.trim(),
+        whatsapp: whatsappInput.value.trim(),
+        empresa: '',
+        segmento: '',
+        cidade: '',
+        estado: '',
+        site: normalizeSiteUrl(siteInput.value),
+        instagram: '',
+        tipoProjeto: 'Diagnóstico de Site',
+        objetivo: objetivoInput.value.trim(),
+        prazo: 'Retorno em até 24h úteis',
+        investimento: '',
+        referencias: '',
+        observacoes: 'Lead vindo da landing /diagnostico',
+        origem: 'Landing /diagnostico',
+        iaResumo: '',
+        iaComplexidade: '',
+        iaEscopo: '',
+        iaFaixaValor: ''
+      };
+    }
+
+    function showSuccess(){
+      form.classList.add('is-hidden');
+      formNote.classList.add('is-hidden');
+      successState.classList.add('show');
+    }
+
+    function updateLoading(isLoading){
+      submitBtn.disabled = isLoading;
+      submitBtn.style.opacity = isLoading ? '.88' : '';
+      submitBtn.innerHTML = isLoading ? 'Enviando...' : defaultSubmitHtml;
+    }
+
+    function trackFormStart(fieldName){
+      if(hasTrackedFormStart){
+        return;
+      }
+      hasTrackedFormStart = true;
+      track('start_diagnostico_form', {
+        event_category: 'diagnostico',
+        source_page: 'diagnostico',
+        source_section: 'hero_form',
+        destination: 'form',
+        cta_label: fieldName || 'form_start'
+      });
+    }
+
+    function submitLead(payload){
+      if(!ENDPOINT){
+        saveFallback(payload);
+        return Promise.resolve();
+      }
+
+      return fetch(ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      }).catch(function(){
+        saveFallback(payload);
+      });
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      var payload = collectPayload();
+      var invalids = [
+        { field: nomeField, input: nomeInput, invalid: !payload.nome },
+        { field: whatsappField, input: whatsappInput, invalid: !isValidWhatsapp(payload.whatsapp) },
+        { field: emailField, input: emailInput, invalid: !!payload.email && !isValidEmail(payload.email) },
+        { field: siteField, input: siteInput, invalid: !payload.site },
+        { field: objetivoField, input: objetivoInput, invalid: !payload.objetivo }
+      ];
+      var firstInvalid = null;
+
+      invalids.forEach(function(item){
+        setInvalid(item.field, item.input, item.invalid);
+        if(item.invalid && !firstInvalid){
+          firstInvalid = item.input;
+        }
+      });
+
+      if(firstInvalid){
+        firstInvalid.focus();
+        return;
+      }
+
+      updateLoading(true);
+      track('submit_diagnostico_form', {
+        event_category: 'diagnostico',
+        source_page: 'diagnostico',
+        source_section: 'hero_form',
+        destination: 'form',
+        cta_label: 'Solicitar diagnóstico',
+        site_url_filled: payload.site ? 'yes' : 'no'
+      });
+
+      submitLead(payload).then(function(){
+        track('generate_lead', {
+          event_category: 'diagnostico',
+          source_page: 'diagnostico',
+          source_section: 'hero_form',
+          value: 1
+        });
+        showSuccess();
+      }).finally(function(){
+        updateLoading(false);
+      });
+    });
+
+    [
+      { input: nomeInput, field: nomeField, fieldName: 'nome', validate: function(value){ return !!value.trim(); } },
+      { input: whatsappInput, field: whatsappField, fieldName: 'whatsapp', validate: isValidWhatsapp },
+      { input: emailInput, field: emailField, fieldName: 'email', validate: function(value){ return !value.trim() || isValidEmail(value.trim()); } },
+      { input: siteInput, field: siteField, fieldName: 'site', validate: function(value){ return !!value.trim(); } },
+      { input: objetivoInput, field: objetivoField, fieldName: 'objetivo', validate: function(value){ return !!value.trim(); } }
+    ].forEach(function(item){
+      item.input.addEventListener('focus', function(){
+        trackFormStart(item.fieldName);
+      }, { once:true });
+      item.input.addEventListener('input', function(){
+        trackFormStart(item.fieldName);
+        if(item.validate(item.input.value)){
+          setInvalid(item.field, item.input, false);
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-track-event]').forEach(function(el){
+      el.addEventListener('click', function(){
+        var href = el.getAttribute('href') || '';
+        var destination = el.dataset.trackDestination || 'external';
+        if(!el.dataset.trackDestination && href.charAt(0) === '#'){
+          destination = 'anchor';
+        }else if(!el.dataset.trackDestination && href.indexOf('briefing/') > -1){
+          destination = 'briefing';
+        }else if(!el.dataset.trackDestination && href.indexOf('wa.me') > -1){
+          destination = 'whatsapp';
+        }
+
+        track(el.dataset.trackEvent, {
+          event_category: el.dataset.trackEvent.indexOf('whatsapp') > -1 ? 'whatsapp' : (el.dataset.trackEvent.indexOf('briefing') > -1 ? 'briefing' : 'diagnostico'),
+          source_page: 'diagnostico',
+          source_section: el.dataset.trackSourceSection || 'unknown',
+          destination: destination,
+          cta_label: el.textContent.trim()
+        });
+      });
+    });
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:.18 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
